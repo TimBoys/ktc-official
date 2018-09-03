@@ -4,46 +4,27 @@
 		<Carousel v-model="value1" loop class="carouselCont">
 			<CarouselItem v-for="(imgItem,index) in banner" :key="index">
 				<div class="demo-carousel">
-					<x-img class="carouselImg" v-lazy="imgItem.figureAddress" /></x-img>
+					<x-img class="carouselImg" v-lazy="imgItem" /></x-img>
 				</div>
 			</CarouselItem>
 		</Carousel>
 
-		<!--热门三种按钮-->
-		<div class="topFire_cont">
-			<!--切换地址-->
-			<div class="localAddr">
-				<div class="addrCont" @click="selectAddr">
-					<x-img v-lazy="localAddr.localPos" class="localPos"></x-img>
-					<div>{{localAddr.localName}}</div>
-					<div class="triangle_border_down">
-						<span></span>
-					</div>
-				</div>
-			</div>
-			<!--店铺选择-->
-			<div class="storeDetail" v-if="isShowAs2">
-				<div class="sd-item" v-for="(sdItem,index) in menusStore" @click="selectMenu2(sdItem)"><span :class="{'colorYellow':localAddr.localName == sdItem.storeName}">{{sdItem.storeName}}</span></div>
-			</div>
-		</div>
-
-
 <!--内容模块-->
 		<div class="homeContainer">
 			<div class="ct-title">
-				<div class="ctt-oneTitle">素匠泰茶</div>
+				<div class="ctt-oneTitle">致想管理咨询(KeepThinking Consulting)</div>
 				<div class="ctt-twoTitle"><div class="line"></div></div>
-				<div class="ctt-threeTitle">用心带来全新饮品体验</div>
-				<div class="ctt-fourTitle">素匠泰茶Prime's Thai tea</div>
+				<div class="ctt-threeTitle">用心为每个客户服务</div>
+				<div class="ctt-fourTitle">致想-KTC</div>
 			</div>
 <!--关于我们-->
 			<div class="ct-aboutAs">
 				<div class="ctt-one">
 					<div class="ctto-about">关于我们</div>
 					<div class="ctto-aboutCont">
-						<div class="p">素匠泰茶有别于市面上的传统奶茶，从名字上大家可以知道，我们是主营泰式奶茶的，在市面上港式、台式奶茶层出不穷的时代，我们想让大家喝到不一样的饮品，感受到生活中与众不同的小确幸。</div>
-						<div class="p">“Prime”我们取它的最初的、最好的意思，旨在为大家传递我们想把最初的、最好的产品带给大家的理念，让大家能喝到我们用匠心打造的饮品。</div>	
-						<div class="p">为了塑造与众不同的品牌形象，我们以突破传统台式奶茶口味为宗旨，融入泰式制作工艺，创新奶茶发展理念，现在在行业中已经成为了一个标杆式的品牌，我们会不忘初心，让素匠泰茶成为一个被更多人喜欢的品牌。</div>							
+						<div class="p">致想咨询依据每个客户的特殊需要和业务环境，融入公司对数据的深刻洞察，并与我们的最佳实践和实战经验结合起来，力求为客户提供最佳的解决方案。并与客户长期合作，提供高质量服务、确保我们的客户能够受益于核心业务并获得可持续的竞争优势。</div>
+						<div class="p">在保证服务质量的前提下，我们尤其注重技术创新。在参与的很多大型项目中，都体现了我们的顾问对独特的业务需求背景的缜密思考。为改善经营业绩，优化管理流程，提升产品和服务的效率和效果，我们不懈探索、勇于实践，以引人入胜、超越期待的特色创造成果得到了客户的肯定。 </div>	
+						<!--<div class="p">为了塑造与众不同的品牌形象，我们以突破传统台式奶茶口味为宗旨，融入泰式制作工艺，创新奶茶发展理念，现在在行业中已经成为了一个标杆式的品牌，我们会不忘初心，让素匠泰茶成为一个被更多人喜欢的品牌。</div>-->							
 					</div>
 					
 				</div>
@@ -53,30 +34,12 @@
 					</div>
 				</div>
 			</div>
-<!--当季精选-->
-			<div class="ct-detail">
-				<div class="detailFire_cont">
-					<div v-for="(detailFS,index) in detailFireSrc" class="df_cell" v-if="index == 0">
-						<div class="df_header">
-							<!--<x-img  v-lazy="detailFS.classLogo"  class="dfh_img"></x-img>
-							<p class="dfh_title">{{detailFS.className}} ——</p>-->
-							<p class="dfh_title2">{{detailFS.className}}</p>
-						</div>
-						<div class="df_body">
-							<div v-for="(dfb_body) in detailFS.goods" class="dfb_item" >
-								<x-img v-lazy="dfb_body.goodsPictureRound" class="dfb_img"></x-img>
-								<p class="dfb_name">{{dfb_body.goodsName}}</p>
-								<!--<p class="dfb_price">${{dfb_body.goodsPrice}}</p>-->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+
 <!--轮播2-->
 		<div class="carouselCont2">
-				<div class="ctt-oneTitle">素匠泰茶</div>
+				<div class="ctt-oneTitle">KeepThinking Consulting</div>
 				<div class="ctt-twoTitle"><div class="line"></div></div>
-				<div class="ctt-threeTitle">每一杯好差，从用料开始</div>	
+				<div class="ctt-threeTitle">客户名录</div>	
 				<!--模态框2-->
 				<div class="carouseScroll">
 					<div class="csModel">
@@ -90,8 +53,6 @@
 						</div>
 						<div class="cs-next" @click="csPre">></div>
 					</div>
-					
-					
 				</div>
 				<!--模态框2-->
 				
@@ -99,7 +60,7 @@
 
 <!--加盟-->
 		<div class="joinUsCont">
-				<div class="ctt-threeTitle">加盟支持</div>	
+				<div class="ctt-threeTitle">为什么选择我们?</div>	
 				<div class="ctt-two">
 					<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont">
 						<div>
@@ -113,7 +74,7 @@
 <!--联系我们-->
 		<div class="findUs">
 				<div class="findUsCont">
-					<x-img v-lazy="aboutImg[2]" class="abSrcContImg"></x-img>
+					<x-img v-lazy="aboutImg[0]" class="abSrcContImg"></x-img>
 					<div class="fuTrueCont">
 						<div class="ftc-left">
 							<div class="ftcl-title">联系我们</div>
@@ -152,22 +113,13 @@
 		name: "home",
 		data() {
 			return {
-				banner: [],
+				banner: ["http://www.keepthinking.com.cn/en/img/home.jpg","http://www.keepthinking.com.cn/en/img/succ.jpg"],
 				value1: 0,
-				isShowAs2: false,
-				menusAddr: {},
-				menusStore: [], //店铺数据
-				localAddr: {
-					localPos: "../../../pcStatic/images/home/local_position2.png",
-					localName: ""
-				},
 				aboutCont:"素匠泰茶有别于市面上的传统奶茶，从名字上大家可以知道，我们是主营泰式奶茶的，在市面上港式、台式奶茶层出不穷的时代，我们想让大家喝到不一样的饮品，感受到生活中与众不同的小确幸。",
 				//关于我们
 				aboutImg:[
-					"../../../pcStatic/images/home/testImg5.jpg",
-					"../../../pcStatic/images/home/testImg6.jpg",
-					"../../../pcStatic/images/home/testImg7.jpg",
-					"../../../pcStatic/images/home/testImg8.jpg",
+					"http://www.keepthinking.com.cn/en/img/home.jpg",
+					"http://www.keepthinking.com.cn/en/img/succ.jpg"
 				],
 				//加入我们
 				joinUsCont:[{
@@ -225,121 +177,32 @@
 		mounted: function() {
 
 			//初始化轮播图2
-			canScrollWidth = this.$refs.allCsCont.scrollWidth - this.$refs.allCsCont.clientWidth; //可以滚动的宽度
-			crouselScrWidth = this.$refs.allCsCont.scrollWidth / 10;
 			this.allCsCont2();
 			//初始化店铺
 			this.initGetStoreId();
-			//初始化店铺数据
-			this.initStoreData();			
 		},
 
 		methods: {
 			//初始化店铺获取店铺编号
 			initGetStoreId() {
-				var _this = this;
-				this.$http.get("/userLogin/storelist", {
-					params: {
-						lang: DB.getItem("localLang").toString()
-					}
-				}).then((res) => {
-					if(res.status == 200 && res.data.rspCode == "00000") {
-						//初始化上拉店铺
-						if(DB.getItem("storeNo").toString()) {
-							//有缓存过店铺编号，根据店铺编号去取
-							res.data.data.data.forEach(function(item, index) {
-								if(item.storeNo == DB.getItem("storeNo").toString()) {
-									_this.localAddr.localName = item.storeName;
-								}
-							})
-						} else {
-							//第一次进来没有缓存数据，1缓存storeNo ,2初始化选择框
-							res.data.data.data.forEach(function(item, index) {
-								if(item.isDefault) {
-									DB.setItem("storeNo", item.storeNo);
-									_this.localAddr.localName = item.storeName;
-								}
-							})
-						}
-						//初始化上拉店铺 ，缓存三个店铺数据
-						this.menusStore = res.data.data.data;
-						res.data.data.data.forEach(function(item, index) {
-							_this.menusAddr["storeName_" + item.storeNo] = item.storeName;
-						})
-						DB.setItem("storeList", JSON.stringify(res.data.data.data));
-						//初始化店铺数据
-						this.initStoreData();
-						this.initGetCarousel();
-					}
-				}).catch((err) => {
-					console.log(err)
-				})
 
-			},
-			initGetCarousel() {
-				this.$http.get("/userLogin/getCarouselFigure", {
-					params: {
-						//						storeNo:DB.getItem("storeNo").toString(),
-						storeNo: "D00005",
-						lang: "zh"
-					}
-				}).then((res) => {
-					console.log(res)
-					console.log(res.data.data.data)
-					if(res.status == 200 && res.data.rspCode == "00000") {
-						this.banner = res.data.data.data;
-					}
-				}).catch((err) => {
-					console.log(err)
-				})
-			},
-			selectAddr() {
-				//				this.isShowAs = true;
-				this.isShowAs2 = !this.isShowAs2;
-			},
-			//切换店铺 存储店铺编号 更新选择框自定义
-			selectMenu2(key, val) {
-				console.log(key)
-				var selectVal = key.storeNo;
-				//				console.log(selectVal[1]);
-				if(selectVal != DB.getItem("storeNo").toString()) {
-					DB.setItem("storeNo", selectVal);
-					this.localAddr.localName = val;
-					//青春店铺缓存
-					window.location.reload();
-				}
-			},
-			//初试化店铺数据
-			initStoreData(){
-				var _this = this;
-				this.$http.get("/userLogin/getClassGoods",{
-					params:{
-						storeNo:DB.getItem("storeNo").toString(),
-						classType:1,
-						lang:DB.getItem("localLang").toString()
-					}
-				}).then((res) => {
-						console.log("/userLogin/getClassGoods")
-						console.log(res)
-						console.log(res.data.data.data)
-						if(res.status == 200 && res.data.rspCode == "00000"){
-							this.detailFireSrc = res.data.data.data;
-						}
-				}).catch((err) => {
-					console.log(err)
-				})				
 			},
 			
 			//轮播2
 			allCsCont2(){
+				setTimeout(()=>{
+					canScrollWidth = this.$refs.allCsCont.scrollWidth - this.$refs.allCsCont.clientWidth; //可以滚动的宽度
+					crouselScrWidth = this.$refs.allCsCont.scrollWidth / 10;
+					
 //				console.dir(this.$refs.allCsCont.scrollWidth)
-				sivTime =  setInterval(()=>{
-					this.$refs.allCsCont.scrollLeft += 1;
-//					console.log(this.$refs.allCsCont.scrollLeft)
-					if(this.$refs.allCsCont.scrollLeft >= canScrollWidth){
-						this.$refs.allCsCont.scrollLeft = 0;
-					}
-				},30)
+//				sivTime =  setInterval(()=>{
+//					this.$refs.allCsCont.scrollLeft += 1;
+////					console.log(this.$refs.allCsCont.scrollLeft)
+//					if(this.$refs.allCsCont.scrollLeft >= canScrollWidth -1	){
+//						this.$refs.allCsCont.scrollLeft = 0;
+//					}
+//				},10)
+				},1000)
 				
 			},
 			//右
@@ -347,7 +210,7 @@
 				clearInterval(sivTime);
 //				console.log("csPre")
 				this.$refs.allCsCont.scrollLeft += crouselScrWidth;
-				if(this.$refs.allCsCont.scrollLeft >= canScrollWidth){
+				if(this.$refs.allCsCont.scrollLeft >= canScrollWidth -1){
 					this.$refs.allCsCont.scrollLeft = 0;
 				}
 
@@ -590,7 +453,7 @@
 					height: 4rem;
 					width: 100%;
 					/*background-color: rgba(0,0,0,0.8);*/
-					background-image: url("../../../pcStatic/images/home/testImg5.jpg");
+					background-image: url("http://www.keepthinking.com.cn/en/img/home.jpg");
 					background-repeat:no-repeat ;
 					background-size:100% 100% ;
 					overflow:hidden;

@@ -12,23 +12,18 @@
 			<span class="icon-bar"></span>
 		</button>
 
-		<a class="navbar-brand nsjt-brand" href="#"><x-img v-lazy="sjtLogo"  class="sjtLogo_img"></x-img>·素匠泰茶</a>
+		<a class="navbar-brand nsjt-brand" href="#">
+			<!--<x-img v-lazy="sjtLogo"  class="sjtLogo_img"></x-img>-->
+			KeepThinking Consulting
+		</a>
 	</div>
 	<div class="collapse navbar-collapse divCollapse" id="example-navbar-collapse" ref="divCollapse">
-		<ul class="nav navbar-nav navbar-right nsjt-right wbStyle" v-if="iswbStyle">
+		<ul class="nav navbar-nav navbar-right nsjt-right " :class="{'wbStyle': iswbStyle }" >
 			<li><a href="#/pcHome" :class="{'actived' : isActive('pcHome')}">首页</a></li>
-			<li><a href="./wxindex.html#/home" :class="{'actived' : isActive('home')}">当季精选</a></li>
-			<li><a href="./wxindex.html#/classification" :class="{'actived' : isActive('classification')}">所有商品</a></li>
-			<li><a href="./wxindex.html#/mine" :class="{'actived' : isActive('mine')}">个人中心</a></li>
-			<li><a href="#/applyJoin" :class="{'actived' : isActive('applyJoin')}">申请加盟</a></li>
-		</ul>
-		
-		<ul class="nav navbar-nav navbar-right nsjt-right" v-else>
-			<li><a href="#/pcHome" :class="{'actived' : isActive('pcHome')}">首页</a></li>
-			<li><a href="./wxindex.html#/home" :class="{'actived' : isActive('home')}">当季精选</a></li>
-			<li><a href="./wxindex.html#/classification" :class="{'actived' : isActive('classification')}">所有商品</a></li>
-			<li><a href="./wxindex.html#/mine" :class="{'actived' : isActive('mine')}">个人中心</a></li>
-			<li><a href="#/applyJoin" :class="{'actived' : isActive('applyJoin')}">申请加盟</a></li>
+			<li><a href="./wxindex.html#/home" :class="{'actived' : isActive('home')}">关于我们</a></li>
+			<li><a href="./wxindex.html#/classification" :class="{'actived' : isActive('classification')}">服务领域</a></li>
+			<li><a href="./wxindex.html#/mine" :class="{'actived' : isActive('mine')}">成功案例</a></li>
+			<li><a href="#/applyJoin" :class="{'actived' : isActive('applyJoin')}">联系我们</a></li>
 		</ul>
 		
 	</div>
