@@ -23,7 +23,7 @@
 					<div class="ctto-about">关于我们</div>
 					<div class="ctto-aboutCont">
 						<div class="p">致想咨询依据每个客户的特殊需要和业务环境，融入公司对数据的深刻洞察，并与我们的最佳实践和实战经验结合起来，力求为客户提供最佳的解决方案。并与客户长期合作，提供高质量服务、确保我们的客户能够受益于核心业务并获得可持续的竞争优势。</div>
-						<div class="p">在保证服务质量的前提下，我们尤其注重技术创新。在参与的很多大型项目中，都体现了我们的顾问对独特的业务需求背景的缜密思考。为改善经营业绩，优化管理流程，提升产品和服务的效率和效果，我们不懈探索、勇于实践，以引人入胜、超越期待的特色创造成果得到了客户的肯定。 </div>	
+						<!--<div class="p">在保证服务质量的前提下，我们尤其注重技术创新。在参与的很多大型项目中，都体现了我们的顾问对独特的业务需求背景的缜密思考。为改善经营业绩，优化管理流程，提升产品和服务的效率和效果，我们不懈探索、勇于实践，以引人入胜、超越期待的特色创造成果得到了客户的肯定。 </div>-->	
 						<!--<div class="p">为了塑造与众不同的品牌形象，我们以突破传统台式奶茶口味为宗旨，融入泰式制作工艺，创新奶茶发展理念，现在在行业中已经成为了一个标杆式的品牌，我们会不忘初心，让素匠泰茶成为一个被更多人喜欢的品牌。</div>-->							
 					</div>
 					
@@ -61,7 +61,8 @@
 <!--加盟-->
 		<div class="joinUsCont">
 				<div class="ctt-threeTitle">为什么选择我们?</div>	
-				<div class="ctt-two">
+				<x-img v-lazy="cttTwoImg" class="ctt-twoImg"></x-img>
+				<!--<div class="ctt-two">
 					<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont">
 						<div>
 							<x-img v-lazy="abSrcItem.src" class="abSrcContImg"></x-img>
@@ -69,7 +70,7 @@
 							<div class="dectTwo">{{abSrcItem.dectTwo}}</div>
 						</div>
 					</div>
-				</div>				
+				</div>				-->
 		</div>
 <!--联系我们-->
 		<div class="findUs">
@@ -123,53 +124,53 @@
 				],
 				//加入我们
 				joinUsCont:[{
-					src:"../../../pcStatic/images/home/joinUs.png",
+					src:"../../../static/images/home/joinUs.png",
 					dectOne:"经营模式支持",
 					dectTwo:"完备的管理体系督导现场指导"
 				},{
-					src:"../../../pcStatic/images/home/joinUs.png",
+					src:"../../../static/images/home/joinUs.png",
 					dectOne:"品牌形象支持",
 					dectTwo:"总部一体化免费提供店面的形象设计图，并提供统一的店员服装"
 					},
 					{
-					src:"../../../pcStatic/images/home/joinUs.png",
+					src:"../../../static/images/home/joinUs.png",
 					dectOne:"店铺选址支持",
 					dectTwo:"总部辅助加盟商现场选址，专业建议，合理选择"
 					},
 					{
-					src:"../../../pcStatic/images/home/joinUs.png",
+					src:"../../../static/images/home/joinUs.png",
 					dectOne:"店铺装修支持",
 					dectTwo:"加盟总部将根据加盟商的实际要求提供不同的装修风格，全面辅助加盟商合理装修做到省钱省力"
 					},
 					{
-					src:"../../../pcStatic/images/home/joinUs.png",
+					src:"../../../static/images/home/joinUs.png",
 					dectOne:"总部培训支持",
 					dectTwo:"加盟总部在店面开业前，会对所有的店员进行专业的技术和管理培训"
 					},
 					{
-					src:"../../../pcStatic/images/home/joinUs.png",
+					src:"../../../static/images/home/joinUs.png",
 					dectOne:"开业营销支持",
 					dectTwo:"加盟总部根据当地商圈和加盟商的实际情况进行合理的经营策划，全面辅助加盟商创业"
 					}
-					
 				],				
-
+				cttTwoImg:"../../../static/images/home/joinUs2.png",
 				//轮播2
-				cscItem:["../../../pcStatic/images/home/testImg1.jpg","../../../pcStatic/images/home/testImg2.jpg","../../../pcStatic/images/home/testImg3.jpg","../../../pcStatic/images/home/testImg4.jpg","../../../pcStatic/images/home/testImg5.jpg","../../../pcStatic/images/home/testImg6.jpg","../../../pcStatic/images/home/testImg7.jpg","../../../pcStatic/images/home/testImg8.jpg","../../../pcStatic/images/home/testImg2.jpg","../../../pcStatic/images/home/testImg1.jpg",],
+				cscItem:["../../../static/images/home/testImg1.jpg","../../../static/images/home/testImg2.jpg","../../../static/images/home/testImg3.jpg","../../../static/images/home/testImg4.jpg","../../../static/images/home/testImg5.jpg","../../../static/images/home/testImg6.jpg","../../../static/images/home/testImg7.jpg","../../../static/images/home/testImg8.jpg","../../../static/images/home/testImg2.jpg","../../../static/images/home/testImg1.jpg",],
 				crouselScrWidth:null, //每次滚动距离
 				//底部联系我们三个
 				ftclcCont:[{
-					src:"../../pcStatic/images/mine/addr.png",
-					textCont:"175-13988 Maycrest Way RichMond"
+					src:"../../static/images/mine/tele.png",
+					textCont:"15221175771   刘文君"
 				},{
-					src:"../../pcStatic/images/mine/tele.png",
-					textCont:"604-604-6044"
+					src:"../../static/images/mine/contact_ telephone.png",
+					textCont:"63300002"
 				},{
-					src:"../../pcStatic/images/mine/eMail.png",
-					textCont:"customerservice@123.com"
+					src:"../../static/images/mine/eMail.png",
+					textCont:"hr@keepthinking.com.cn"
 				}],
 				//二维码
-				ecode:"../../pcStatic/images/mine/ecode.png",
+//				ecode:"../../static/images/mine/ecode.png",
+				ecode:"",
 				//首页最热的三类的图标
 				detailFireSrc: [],
 			}
@@ -193,15 +194,14 @@
 				setTimeout(()=>{
 					canScrollWidth = this.$refs.allCsCont.scrollWidth - this.$refs.allCsCont.clientWidth; //可以滚动的宽度
 					crouselScrWidth = this.$refs.allCsCont.scrollWidth / 10;
-					
-//				console.dir(this.$refs.allCsCont.scrollWidth)
-//				sivTime =  setInterval(()=>{
-//					this.$refs.allCsCont.scrollLeft += 1;
-////					console.log(this.$refs.allCsCont.scrollLeft)
-//					if(this.$refs.allCsCont.scrollLeft >= canScrollWidth -1	){
-//						this.$refs.allCsCont.scrollLeft = 0;
-//					}
-//				},10)
+				console.dir(this.$refs.allCsCont.scrollWidth)
+				sivTime =  setInterval(()=>{
+					this.$refs.allCsCont.scrollLeft += 1;
+//					console.log(this.$refs.allCsCont.scrollLeft)
+					if(this.$refs.allCsCont.scrollLeft >= canScrollWidth -1	){
+						this.$refs.allCsCont.scrollLeft = 0;
+					}
+				},10)
 				},1000)
 				
 			},
@@ -509,8 +509,12 @@
 					text-align: center;
 					width: 100%;
 					color: $originColor;
-					padding: 0.2rem 0 0.4rem 0;
-				}				
+					padding: 0.2rem 0 0.2rem 0;
+				}		
+				.ctt-twoImg{
+					width:100%;
+					height: 3.8rem;
+				}		
 				.ctt-two{
 					.abSrcCont{
 						width: calc(100%/3);

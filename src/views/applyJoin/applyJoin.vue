@@ -68,21 +68,21 @@
 		name: "home",
 		data() {
 			return {
-				 joinUsHeadImg:"../../../pcStatic/images/home/joinUsHeadImg.jpg",
-				 aboutImg:"../../../pcStatic/images/home/testImg7.jpg",
+				 joinUsHeadImg:"../../../static/images/home/joinUsHeadImg.jpg",
+				 aboutImg:"../../../static/images/home/testImg7.jpg",
 				//底部联系我们三个
 				ftclcCont:[{
-					src:"../../pcStatic/images/mine/addr.png",
+					src:"../../static/images/mine/addr.png",
 					textCont:"175-13988 Maycrest Way RichMond"
 				},{
-					src:"../../pcStatic/images/mine/tele.png",
+					src:"../../static/images/mine/tele.png",
 					textCont:"604-604-6044"
 				},{
-					src:"../../pcStatic/images/mine/eMail.png",
+					src:"../../static/images/mine/eMail.png",
 					textCont:"customerservice@123.com"
 				}],				 
 				//二维码
-				ecode:"../../pcStatic/images/mine/ecode.png",		
+				ecode:"../../static/images/mine/ecode.png",		
 				submitData:{
 					name:"",
 					telephone:"",

@@ -10,7 +10,7 @@ module.exports = {
   dev: {
 
     // Paths
-    assetsSubDirectory: 'pcStatic',
+    assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
             '**': {
@@ -56,7 +56,7 @@ module.exports = {
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'pcStatic',
+    assetsSubDirectory: 'static',
     assetsPublicPath: '/',
 
     /**

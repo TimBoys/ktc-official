@@ -59,7 +59,7 @@ export default {
   data(){
   	return {
   		nowUrl:"/",
-  		sjtLogo:"../../pcStatic/images/mine/sjtLogo.jpg",
+  		sjtLogo:"../../static/images/mine/sjtLogo.jpg",
   		iswbStyle:false,
   		localLang: "zh",
   	}
