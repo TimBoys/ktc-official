@@ -28,9 +28,9 @@
 		
 	</div>
 	
-		<div class="navlocalLang">
+		<!--<div class="navlocalLang">
 			<span class="localLang navbar-right" @click="changeLang(localLang)">{{showLan}}</span>
-		</div>	
+		</div>	-->
 	
 	
 	</div>
