@@ -20,9 +20,9 @@
 	<div class="collapse navbar-collapse divCollapse" id="example-navbar-collapse" ref="divCollapse">
 		<ul class="nav navbar-nav navbar-right nsjt-right " :class="{'wbStyle': iswbStyle }" >
 			<li><a href="#/pcHome" :class="{'actived' : isActive('pcHome')}">首页</a></li>
-			<li><a href="./wxindex.html#/home" :class="{'actived' : isActive('home')}">关于我们</a></li>
-			<li><a href="./wxindex.html#/classification" :class="{'actived' : isActive('classification')}">服务领域</a></li>
-			<li><a href="./wxindex.html#/mine" :class="{'actived' : isActive('mine')}">成功案例</a></li>
+			<li><a href="#/aboutUs" :class="{'actived' : isActive('aboutUs')}">关于我们</a></li>
+			<li><a href="#/services" :class="{'actived' : isActive('services')}">服务领域</a></li>
+			<li><a href="#/succCase" :class="{'actived' : isActive('succCase')}">成功案例</a></li>
 			<li><a href="#/applyJoin" :class="{'actived' : isActive('applyJoin')}">联系我们</a></li>
 		</ul>
 		

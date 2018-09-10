@@ -69,6 +69,10 @@ Vue.config.productionTip = false
 // hack for active mobile
 document.addEventListener("touchstart", function(){}, true)
 
+router.afterEach((to,from,next) => {
+  window.scrollTo(0,0);
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

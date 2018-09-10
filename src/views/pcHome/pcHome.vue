@@ -1,5 +1,5 @@
 <template>
-	<div class="initCont">
+	<div class="initCont" ref="initCont">
 
 		<Carousel v-model="value1" loop autoplay :autoplay-speed="4000" class="carouselCont">
 			<CarouselItem v-for="(imgItem,index) in banner" :key="index">
@@ -151,44 +151,44 @@
 					"http://www.keepthinking.com.cn/en/img/home.jpg",
 					"http://www.keepthinking.com.cn/en/img/succ.jpg"
 				],
-				//加入我们
+				//服务领域
 				joinUsCont:[{
-					src:"../../../static/images/home/joinUs.png",
+					src:"../../../static/images/mine/im-time.png",
 					dectOne:"现场支持服务",
 					dectTwo:"2小时快速响应、多语种、覆盖北上广，让企业每时每刻均能享受到高品质的瑞耀服务"
 					},{
-					src:"../../../static/images/home/joinUs.png",
+					src:"../../../static/images/mine/computer.png",
 					dectOne:"IT咨询服务",
 					dectTwo:"帮助企业建立企业信息战略架构，提供可预期的IT建设路线图，提高企业应对业务变化和抗风险的能力"
 					},
 					{
-					src:"../../../static/images/home/joinUs.png",
+					src:"../../../static/images/mine/lock.png",
 					dectOne:"信息安全评估",
 					dectTwo:"从资产分类、日常运维、管理机制、系统配置等方面对组织信息安全管理，安全现状进行调研"
 					},
 					{
-					src:"../../../static/images/home/joinUs.png",
+					src:"../../../static/images/mine/ktcyun.png",
 					dectOne:"企业云; Office 365",
 					dectTwo:"凭借Office365完整的办公解决方案，助员工实现高效的移动办公和沟通，降低企业运营成本"
 					}
 				],			
 				//为什么加入我们
 				whyjoinUsCont:[{
-					src:"../../../static/images/home/joinUs.png",
+					src:"../../../static/images/mine/tel.png",
 					dectOne:"2 小时响应",
 					dectTwo:"还在苦苦等待服务人员上门？"
 					},{
-					src:"../../../static/images/home/joinUs.png",
+					src:"../../../static/images/mine/rili.png",
 					dectOne:"98% 故障解决率",
 					dectTwo:"还在被反复出现的故障而困扰？"
 					},
 					{
-					src:"../../../static/images/home/joinUs.png",
+					src:"../../../static/images/mine/xiuli.png",
 					dectOne:"30+ 技术人员",
 					dectTwo:"还在寻找一个技术实力雄厚的团队？"
 					},
 					{
-					src:"../../../static/images/home/joinUs.png",
+					src:"../../../static/images/mine/zhuangshi.png",
 					dectOne:"96% 满意度",
 					dectTwo:"还在投诉服务人员不专业、态度差？"
 					}
@@ -227,7 +227,6 @@
 			}
 		},
 		mounted: function() {
-
 			//初始化轮播图2
 			this.allCsCont2();
 			//初始化店铺
@@ -339,7 +338,7 @@
 					.ctto-aboutCont{
 						padding-right: 0;
 						color:#333;
-						font-size: 0.3rem;		
+						font-size: 0.24rem;		
 						&>.p{
 							text-indent: 0.48rem;
 							width: 88%;
@@ -365,6 +364,7 @@
 			.carouselCont2{
 				width: 100%;;
 				text-align: center;
+				background-color: #F4F4F4;
 				div{
 					
 				}
@@ -395,13 +395,13 @@
 					background-repeat:no-repeat ;
 					background-size:100% 100% ;
 					overflow:hidden;
-					margin-top:0.2rem ;
+					/*margin-top:0.2rem ;*/
 					.csModel{
-						margin:0.2rem 2%;
+						margin:0 2% ;
 						display: flex;
 						background-color: #F4F4F4;
 						width:96%;
-						height: 3.6rem;					
+						height: 3.4rem;					
 						div{
 							display: inline-block;
 							float: left;
@@ -505,6 +505,7 @@
 					height: 3.8rem;
 				}		
 				.ctt-two{
+					color: #BBB;
 					.abSrcCont{
 						width: calc(100%/4);
 						display: inline-block;
@@ -535,13 +536,13 @@
 /*联系我们*/
 			.findUs{
 				width: 100%;
-				margin-top: 0.2rem;
+				/*margin-top: 0.2rem;*/
 				color: #fff;
 				.findUsCont{
 					position: relative;
 					.abSrcContKTC{
 						height: 4rem;
-						background-color: #666;
+						background-color: #333;
 					}
 					.abSrcContImg{
 						height: 4rem;

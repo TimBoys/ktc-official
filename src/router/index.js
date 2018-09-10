@@ -35,6 +35,27 @@ export default new Router({
 		    }
 		},
 		{
+			path: '/aboutUs',
+			name: 'aboutUs',
+		    component(resolve){
+		       require(['@/views/aboutUs/aboutUs.vue'], resolve)
+		    }
+		},			
+		{
+			path: '/services',
+			name: 'services',
+		    component(resolve){
+		       require(['@/views/services/services.vue'], resolve)
+		    }
+		},
+		{
+			path: '/succCase',
+			name: 'succCase',
+		    component(resolve){
+		       require(['@/views/succCase/succCase.vue'], resolve)
+		    }
+		},		
+		{
 			path: '/applyJoin',
 			name: 'applyJoin',
 		    component(resolve){
