@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import _ from 'lodash'
-import test from '@/components/test'
 
 Router.prototype.openPage = function(link,query){
 //	console.log(link)
@@ -21,11 +20,6 @@ export default new Router({
 	routes: [{
 			path: '/',
 			redirect: '/pcHome'
-		},
-		{
-			path: '/test',
-			name: 'test',
-			component: test
 		},
 		{
 			path: '/pcHome',

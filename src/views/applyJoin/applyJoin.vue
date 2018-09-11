@@ -84,10 +84,13 @@
 <script>
 	import { XImg, Flexbox, FlexboxItem, Actionsheet } from 'vux';
 	import headerBanner from '../../components/header-banner';
+	import swiperWork from '../../components/swiperWork';
 	export default {
 		name: "home",
 		data() {
 			return {
+				//轮播
+				cscItem:["../../../static/images/home/testImg1.jpg","../../../static/images/home/testImg2.jpg","../../../static/images/home/testImg3.jpg","../../../static/images/home/testImg4.jpg","../../../static/images/home/testImg5.jpg","../../../static/images/home/testImg6.jpg","../../../static/images/home/testImg7.jpg","../../../static/images/home/testImg8.jpg","../../../static/images/home/testImg2.jpg","../../../static/images/home/testImg1.jpg",],
 				bannerCont:{bannerUrl:"http://www.itwaibaow.com/uploadfile/2016/0518/20160518085709729.jpg",bannerTitle:"联系我们"},
 				 joinUsHeadImg:"../../../static/images/home/joinUsHeadImg.jpg",
 				 aboutImg:"../../../static/images/home/testImg7.jpg",
@@ -166,6 +169,7 @@
 			},
 		},
 		components: {
+			swiperWork,
 			headerBanner,
 			XImg,
 			Flexbox,
@@ -182,6 +186,9 @@
 	.initCont{
 		font-size:0.38rem;
 		padding-top:1rem ;
+		.swiperCont{
+			padding:0 1rem;
+		}
 		.joinUsHeadImg{
 			height: 4.4rem;
 			

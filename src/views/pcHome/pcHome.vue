@@ -67,7 +67,8 @@
 				<div class="ctt-threeTitle">客户名录</div>	
 				<!--模态框2-->
 				<div class="carouseScroll">
-					<div class="csModel">
+					<swiperWork :cscItem="cscItem"></swiperWork>
+					<!--<div class="csModel">
 						<div class="cs-pre" @click="csNext"><</div>
 						<div class="allCont" ref="allCsCont">
 						<div class="csCont" >
@@ -77,7 +78,7 @@
 						</div>
 						</div>
 						<div class="cs-next" @click="csPre">></div>
-					</div>
+					</div>-->
 				</div>
 				<!--模态框2-->
 				
@@ -131,6 +132,7 @@
 <script>
 	import VueDB from '../../util/vue-db/vue-db-long'
 	import { XImg, Flexbox, FlexboxItem, Actionsheet } from 'vux';
+	import swiperWork from '../../components/swiperWork';
 	import _ from 'lodash';	
 	var DB = new VueDB();
 	var sivTime = null;
@@ -195,7 +197,20 @@
 				],	
 				cttTwoImg:"../../../static/images/home/joinUs2.png",
 				//轮播2
-				cscItem:["../../../static/images/home/testImg1.jpg","../../../static/images/home/testImg2.jpg","../../../static/images/home/testImg3.jpg","../../../static/images/home/testImg4.jpg","../../../static/images/home/testImg5.jpg","../../../static/images/home/testImg6.jpg","../../../static/images/home/testImg7.jpg","../../../static/images/home/testImg8.jpg","../../../static/images/home/testImg2.jpg","../../../static/images/home/testImg1.jpg",],
+				cscItem:[
+				"../../../static/images/mine/zhongyuan.jpg",
+				"../../../static/images/mine/luolai.jpg",
+				"../../../static/images/mine/qingsuansuo.jpg",
+				"../../../static/images/mine/rrd.png",				
+				"../../../static/images/mine/zhongyuan.jpg",
+				"../../../static/images/mine/luolai.jpg",
+				"../../../static/images/mine/qingsuansuo.jpg",
+				"../../../static/images/mine/rrd.png",				
+				"../../../static/images/mine/zhongyuan.jpg",
+				"../../../static/images/mine/luolai.jpg",
+				"../../../static/images/mine/qingsuansuo.jpg",
+				"../../../static/images/mine/rrd.png",
+				],
 				crouselScrWidth:null, //每次滚动距离
 				//底部联系我们三个
 				ftclcCont1:[{
@@ -228,7 +243,7 @@
 		},
 		mounted: function() {
 			//初始化轮播图2
-			this.allCsCont2();
+//			this.allCsCont2();
 			//初始化店铺
 			this.initGetStoreId();
 		},
@@ -240,42 +255,43 @@
 			},
 			
 			//轮播2
-			allCsCont2(){
-				setTimeout(()=>{
-					canScrollWidth = this.$refs.allCsCont.scrollWidth - this.$refs.allCsCont.clientWidth; //可以滚动的宽度
-					crouselScrWidth = this.$refs.allCsCont.scrollWidth / 10;
-				console.dir(this.$refs.allCsCont.scrollWidth)
-				sivTime =  setInterval(()=>{
-					this.$refs.allCsCont.scrollLeft += 1;
-//					console.log(this.$refs.allCsCont.scrollLeft)
-					if(this.$refs.allCsCont.scrollLeft >= canScrollWidth -1	){
-						this.$refs.allCsCont.scrollLeft = 0;
-					}
-				},10)
-				},1000)
-				
-			},
-			//右
-			csPre(){
-				clearInterval(sivTime);
-//				console.log("csPre")
-				this.$refs.allCsCont.scrollLeft += crouselScrWidth;
-				if(this.$refs.allCsCont.scrollLeft >= canScrollWidth -1){
-					this.$refs.allCsCont.scrollLeft = 0;
-				}
-
-			},
-			//左
-			csNext(){
-				clearInterval(sivTime);
-//				console.log("csNext")
-				this.$refs.allCsCont.scrollLeft -= crouselScrWidth;
-				if(this.$refs.allCsCont.scrollLeft <= 0){
-					this.$refs.allCsCont.scrollLeft = this.$refs.allCsCont.clientWidth;
-				}				
-			}
+//			allCsCont2(){
+//				setTimeout(()=>{
+//					canScrollWidth = this.$refs.allCsCont.scrollWidth - this.$refs.allCsCont.clientWidth; //可以滚动的宽度
+//					crouselScrWidth = this.$refs.allCsCont.scrollWidth / 10;
+//				console.dir(this.$refs.allCsCont.scrollWidth)
+//				sivTime =  setInterval(()=>{
+//					this.$refs.allCsCont.scrollLeft += 1;
+////					console.log(this.$refs.allCsCont.scrollLeft)
+//					if(this.$refs.allCsCont.scrollLeft >= canScrollWidth -1	){
+//						this.$refs.allCsCont.scrollLeft = 0;
+//					}
+//				},10)
+//				},1000)
+//				
+//			},
+//			//右
+//			csPre(){
+//				clearInterval(sivTime);
+////				console.log("csPre")
+//				this.$refs.allCsCont.scrollLeft += crouselScrWidth;
+//				if(this.$refs.allCsCont.scrollLeft >= canScrollWidth -1){
+//					this.$refs.allCsCont.scrollLeft = 0;
+//				}
+//
+//			},
+//			//左
+//			csNext(){
+//				clearInterval(sivTime);
+////				console.log("csNext")
+//				this.$refs.allCsCont.scrollLeft -= crouselScrWidth;
+//				if(this.$refs.allCsCont.scrollLeft <= 0){
+//					this.$refs.allCsCont.scrollLeft = this.$refs.allCsCont.clientWidth;
+//				}				
+//			}
 		},
 		components: {
+			swiperWork,
 			XImg,
 			Flexbox,
 			FlexboxItem,
@@ -388,7 +404,8 @@
 				}	
 				
 				.carouseScroll{
-					height: 4rem;
+					padding:0 .6rem;
+					height: 3.3rem;
 					width: 100%;
 					/*background-color: rgba(0,0,0,0.8);*/
 					/*background-image: url("http://www.keepthinking.com.cn/en/img/home.jpg");*/

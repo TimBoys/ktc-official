@@ -12,8 +12,8 @@ class Rem{
     function setView(){
       var gg = document.documentElement;
       var width = gg.clientWidth;
-      if(gg.clientWidth > 900){
-        width = 900;
+      if(gg.clientWidth > 750){
+        width = 750;
       }else if(gg.clientWidth < 320){
         width = 320;
       }
