@@ -17,17 +17,18 @@
 				<div class="ctt-threeTitle">关于我们</div>
 			</div>
 <!--关于我们-->
+
 			<div class="ct-aboutAss pdtbRem2">
-				<div class="ctt-two">
-					<div class="abSrcCont"></div>
-				</div>
-				<div class="ctt-one">
-					<div class="ctto-aboutCont">
-						<div class="p">致想咨询依据每个客户的特殊需要和业务环境，融入公司对数据的深刻洞察，并与我们的最佳实践和实战经验结合起来，力求为客户提供最佳的解决方案。并与客户长期合作，提供高质量服务、确保我们的客户能够受益于核心业务并获得可持续的竞争优势。</div>
-						<div class="p">在保证服务质量的前提下，我们尤其注重技术创新。在参与的很多大型项目中，都体现了我们的顾问对独特的业务需求背景的缜密思考。为改善经营业绩，优化管理流程，提升产品和服务的效率和效果，我们不懈探索、勇于实践，以引人入胜、超越期待的特色创造成果得到了客户的肯定。 </div>	
-					</div>
-					
-				</div>
+			    <Row>
+			        <Col :xs="24" :sm="8" :md="8" :lg="8" ><div class="abSrcCont"></div></Col>
+			        <Col :xs="24" :sm="16" :md="16" :lg="16" >
+								<div class="ctto-aboutCont">
+									<div class="p">致想咨询依据每个客户的特殊需要和业务环境，融入公司对数据的深刻洞察，并与我们的最佳实践和实战经验结合起来，力求为客户提供最佳的解决方案。并与客户长期合作，提供高质量服务、确保我们的客户能够受益于核心业务并获得可持续的竞争优势。</div>
+									<div class="p">在保证服务质量的前提下，我们尤其注重技术创新。在参与的很多大型项目中，都体现了我们的顾问对独特的业务需求背景的缜密思考。为改善经营业绩，优化管理流程，提升产品和服务的效率和效果，我们不懈探索、勇于实践，以引人入胜、超越期待的特色创造成果得到了客户的肯定。 </div>	
+									<div class="p">公司快速发展， 而我们对卓越品质以及与客户保持长期愉快合作的目标恒久不变。 同时我们将不懈地吸引并培养优秀的员工，为他们创造良好的发展空间，帮助他们在工作和生活中获得平衡与快乐。 </div>
+								</div>        	
+			        </Col>
+			    </Row>				
 			</div>
 
 <!--服务领域-->
@@ -145,13 +146,13 @@
 			return {
 				ktcAboutUs:"http://www.itwaibaow.com/statics/images/About-Us.jpg",
 				
-				banner: ["http://www.keepthinking.com.cn/en/img/home.jpg","http://www.keepthinking.com.cn/en/img/succ.jpg"],
+				banner: ["http://www.keepthinking.com.cn/en/img/home.jpg","http://www.keepthinking.com.cn/en/img/succ.jpg","../../../static/images/home/banner3.jpg"],
 				value1: 0,
 				aboutCont:"素匠泰茶有别于市面上的传统奶茶，从名字上大家可以知道，我们是主营泰式奶茶的，在市面上港式、台式奶茶层出不穷的时代，我们想让大家喝到不一样的饮品，感受到生活中与众不同的小确幸。",
 				//关于我们
 				aboutImg:[
 					"http://www.keepthinking.com.cn/en/img/home.jpg",
-					"http://www.keepthinking.com.cn/en/img/succ.jpg"
+					"http://www.keepthinking.com.cn/en/img/succ.jpg",
 				],
 				//服务领域
 				joinUsCont:[{
@@ -308,7 +309,7 @@
 		margin-top: 1rem;
 		.carouselCont {
 			.carouselImg {
-				height: 5rem;
+				height: 6rem;
 			}
 		}
 		/*内容区域*/
@@ -340,41 +341,60 @@
 				}
 			}
 			/*关于我们*/
-			.ct-aboutAss{
-				display: flex;
-				&>div,p{
-					width: 50%;
-					padding: 0.1rem;
-				}
-				.ctt-one{
-					.ctto-about{
-						color:#000000;
-						font-size: 0.28rem;
+			@media screen and (min-width:720px) {
+				.ct-aboutAss {
+					padding: 0 3.5rem;
+					padding-bottom: 0.4rem;
+					.abSrcCont {
+						width: 88%;
+						min-height: 5rem;
+						padding: 0.1rem;
+						margin-right: 0.6rem;
+						background-image: url("../../../static/images/home/About-Us2.jpg");
+						background-repeat: no-repeat;
+						background-size: 100% 100%;
+						float: right;
+						border-radius: 8px;
 					}
-					.ctto-aboutCont{
+					.ctto-aboutCont {
 						padding-right: 0;
-						color:#333;
-						font-size: 0.24rem;		
-						&>.p{
+						color: #333;
+						font-size: 0.24rem;
+						&>.p {
 							text-indent: 0.48rem;
 							width: 88%;
-							line-height: 0.5rem;
-						}				
-					}
-				}
-				.ctt-two{
-					display: flex;
-					justify-content: flex-end;
-					.abSrcCont{
-						width: 88%;
-						max-height: 4.5rem;
-						padding:0.1rem;
-						background-image: url("http://www.itwaibaow.com/statics/images/About-Us.jpg");
-						background-repeat:no-repeat ;
-						background-size:100% 100% ;
+							line-height: 0.6rem;
+						}
 					}
 				}
 			}
+			
+			@media screen and (max-width:720px) {
+				.ct-aboutAss {
+					padding: 0 0.5rem;
+					padding-bottom: 0.4rem;
+					.abSrcCont {
+						width: 100%;
+						min-height: 5rem;
+						padding: 0.1rem;
+						background-image: url("../../../static/images/home/About-Us2.jpg");
+						background-repeat: no-repeat;
+						background-size: 100% 100%;
+						border-radius: 8px;
+						margin-bottom: 0.2rem;
+					}
+					.ctto-aboutCont {
+						padding-right: 0;
+						color: #333;
+						font-size: 0.24rem;
+						&>.p {
+							text-indent: 0.48rem;
+							width: 100%;
+							line-height: 0.6rem;
+						}
+					}
+				}
+			}			
 			
 			/*第二个轮播*/
 			.carouselCont2{
