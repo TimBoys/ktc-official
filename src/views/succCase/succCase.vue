@@ -172,8 +172,9 @@
 					height:2.4rem;
 					border:1px solid #ccc;
 					border-radius:4px;
-					padding:0.2rem;
+					padding:0.1rem;
 					display:flex;
+					overflow:hidden;
 				&:hover{
 					box-shadow: 0 0 0.2rem #BBB;
 				}
@@ -188,19 +189,19 @@
 					padding-left:0.2rem ;
 					.cssil-name{
 						color: red;
-						font-size: 0.26rem;
+						font-size: 0.24rem;
 					}
 					.cssil-sccResult{
 						color: #777;
-						margin-bottom: 0.1rem;
+						margin-bottom: 0.06rem;
 					}
 					.cssil-sccBC{
 						font-size: 0.18rem;
-						line-height: 0.3rem;
+						line-height: 0.26rem;
 					}
 					.cssil-sccWorks{
 						font-size: 0.18rem;
-						line-height: 0.3rem;
+						line-height: 0.26rem;
 					}
 				}				
 				}				

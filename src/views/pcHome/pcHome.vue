@@ -343,27 +343,29 @@
 			/*关于我们*/
 			@media screen and (min-width:720px) {
 				.ct-aboutAss {
-					padding: 0 3.5rem;
+					padding: 0 2.2rem;
 					padding-bottom: 0.4rem;
 					.abSrcCont {
-						width: 88%;
+						float: right;
+						width: 100%;
 						min-height: 5rem;
+						height: 100%;
 						padding: 0.1rem;
-						margin-right: 0.6rem;
+						margin-right: 0.3rem;
 						background-image: url("../../../static/images/home/About-Us2.jpg");
 						background-repeat: no-repeat;
 						background-size: 100% 100%;
-						float: right;
 						border-radius: 8px;
 					}
 					.ctto-aboutCont {
 						padding-right: 0;
 						color: #333;
 						font-size: 0.24rem;
+						margin-left: 0.3rem;
 						&>.p {
 							text-indent: 0.48rem;
-							width: 88%;
-							line-height: 0.6rem;
+							width: 100%;
+							line-height: 0.46rem;
 						}
 					}
 				}

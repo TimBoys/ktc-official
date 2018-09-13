@@ -4,142 +4,153 @@
 			<header-banner :cont="bannerCont"></header-banner>
 		</div>
 <!--内容模块-->
-		<div class="homeContainer">
-<!--服务领域-->
-		<div class="joinUsCont  pdtbRem2">
-				<div class="ctt-threeTitle">咨询服务</div>	
-				<div class="ctt-fourTitle">
-					<div class="cttf-title">咨询服务对象：</div>
-					<p  class="cttf-cont">
-						     公司没有成立IT技术部门，或者公司内部IT工程师对IT环境搭建流程不熟悉。想降低经营成本和转移技术风险的企业。 
-					</p>
-					<div class="cttf-title">咨询服务特色：</div>
-					<p  class="cttf-cont">
-						     运用IT33的技术优势以及专业的IT领域渠道，迅速为企业打造和建立起一套完善的企业级IT环境。我们用熟练的技术、专业的运维流程，来为您降低经营成本，您只须装修经营您的公司核心业务！
-					</p>					
-				<div class="ctt-two">
-					<div v-for="(abSrcItem,index) in joinUsCont1" :key="index" class="abSrcCont">
-						<div>
-							<x-img v-lazy="abSrcItem.src" class="abSrcContImg"></x-img>
-							<div class="dectOne">{{abSrcItem.dectOne}}</div>
-							<div class="dectTwo">{{abSrcItem.dectTwo}}</div>
-						</div>
-					</div>
-				</div>					
-				</div>	
-		</div>	
-		
-		
-<!--运维服务-->
-		<div class="joinUsCont greyBC pdtbRem2">
-				<div class="ctt-threeTitle">运维服务</div>	
-				<div class="ctt-fourTitle">
-					<div class="cttf-title">运维服务理念：</div>
-					<p  class="cttf-cont">
-						     致想咨询以“己欲立而立人，己欲达而达人”为服务理念，参考ITSS、ISO20000、ISO27001、ITIL等国内外先进的ITSM标准及实践，结合多年来丰富的电子政务运维服务管理经验，以成熟的运维管理体系为基础，为信息系统提供管理和技术的双重保障。华宇以客户的业务应用为核心，围绕客户的业务战略目标，提供从咨询规划、实施交付、检查监管到评估改进全生命周期的IT运维服务。 <br />
-					</p>
-					<div class="cttf-title">运维服务内容：</div>
-					<p  class="cttf-cont">
-						     咨询规划服务，提供信息化咨询规划、运维平台构建、运维项目咨询、运维体系评估四个服务产品，通过华宇科学实践的运维模型和方法论，结合客户业务现状，选择合适的运维模式，规划和构建科学的运维管理体系，建立高效的信息化管理流程。
-					</p>
-					<p  class="cttf-cont">
-						     运维管理服务，提供运维总包管理、运维服务台管理、运维绩效管理、运维资产资源管理四大项服务，通过对运维服务进行科学、全面、全程的管理，规避运维风险，提高运维效率，为客户提供满意的运维服务。
-					</p>					
-					<p  class="cttf-cont">
-						     运行保障服务，提供基础设施服务、业务应用服务和信息安全服务三个类别的多项服务，覆盖从IT基础设施、业务应用系统以及信息安全的各层次、各方面的IT运行维护和保障。
-					</p>					
-					<p  class="cttf-cont">
-						     数据运维服务，提供信息内容发布、数据质量管理、备份容灾管理、数据分析处理四大项服务，对客户信息化中各类系统数据、业务数据进行管理与维护，通过数据运维服务，实现客户信息系统“数据不丢”的工作目标。并进一步开展数据运维，挖掘数据的价值，促进“信息建设”向“信息服务”转型。
-					</p>					
-				</div>	
-		</div>
-<!--系统建设-->
-		<div class="joinUsCont pdtbRem2">
-				<div class="ctt-threeTitle">系统建设</div>	
-				<div class="ctt-fourTitle">
-					<div class="cttf-title">系统建设过程：</div>
-					<p  class="cttf-cont">
-						     应用软件产品开发的过程分为：规划、定义、开发、验证、确认和维护六个阶段。公司开发过程的管理采用了渐进式开发模型，遵循CMMI模型的管理要求，参考了“统一过程（Unified Process）”。开发过程中强调了面向市场的验证和反馈，在开发过程中鼓励尽早暴露风险，向用户提交符合需求的产品。
-					</p>
-					<div class="cttf-title">系统建设开发队伍：</div>
-					<p  class="cttf-cont">
-						     华宇建立了符合业务需要的组织架构、完备的开发管理制度、开发经费的预算管理和保障机制、开发团队的绩效管理及激励机制等管理措施，并且为开发团队构建了适合创新、鼓励创新的创新环境，还通过与国内知名大学及研究机构建立合作研究实验室等方式，实现产学研相结合，进一步加强开发队伍的研究技术能力和技术素质。
-					</p>					
-				</div>	
-				<div class="ctt-two">
-					<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont">
-						<div>
-							<x-img v-lazy="abSrcItem.src" class="abSrcContImg"></x-img>
-							<div class="dectOne">{{abSrcItem.dectOne}}</div>
-							<div class="dectTwo">{{abSrcItem.dectTwo}}</div>
-						</div>
-					</div>
-				</div>				
-		</div>
-<!--解决方案-->
-		<div class="joinUsCont greyBC pdtbRem2">
-				<div class="ctt-threeTitle">解决方案</div>	
-				<div class="ctt-fourTitle">
-					<p  class="cttf-cont">
-						     致想咨询是一家专业的软件开发服务提供商。拥有杰出的软件开发团队和顶尖的IT 精英，我们始终以满足客户个性化需求、确保软件适用性为原则，提供咨询服务。  <br />
-						　　为了使软件项目能够按照预定的成本、进度、质量顺利完成，我们制定了一套科学的管理流程，主要阶段如下 <br />
-						　　[销售期:] <br />
-						　　　　1、接到您的需求  <br />
-						　　　　2、上门进行需求调研 <br />
-						　　　　3、调研后按照需求进行评估（费用、开发周期） <br />
-						　　　　4、签署合同 <br /> <br />
-						
-						　　[执行期:] <br />
-						　　　　1、需求规格说明书以及系统原型  <br />
-						　　　　2、开发计划 <br />
-						　　　　3、开发+测试 <br />
-						　　　　4、试运行 <br />
-						　　　　5、验收 <br /> <br />
-						
-						　　[售后期:] <br />
-						　　　　1、进入系统维护期
-					</p>
-				</div>	
-		</div>
-
-<!--联系我们KTC版本-->
-		<div class="findUs">
-				<div class="findUsCont">
-					<div class="abSrcContKTC"></div>
-					<div class="fuTrueCont">
-						<div class="ftc-left">
-							<div class="ftcl-title">
-								<span>关于我们</span>
-								<span>服务范围</span>
-								<span>联系我们</span>
+		<div class="homeContainer demo-tabs-style1">
+	    <Tabs>
+	<!--咨询服务-->
+	        <TabPane label="咨询服务">
+			<div class="joinUsCont  pdtbRem2">
+					<div class="ctt-threeTitle">咨询服务</div>	
+					<div class="ctt-fourTitle">
+						<div class="cttf-title">咨询服务对象：</div>
+						<p  class="cttf-cont">
+							     公司没有成立IT技术部门，或者公司内部IT工程师对IT环境搭建流程不熟悉。想降低经营成本和转移技术风险的企业。 
+						</p>
+						<div class="cttf-title">咨询服务特色：</div>
+						<p  class="cttf-cont">
+							     运用IT33的技术优势以及专业的IT领域渠道，迅速为企业打造和建立起一套完善的企业级IT环境。我们用熟练的技术、专业的运维流程，来为您降低经营成本，您只须装修经营您的公司核心业务！
+						</p>					
+					<div class="ctt-two">
+						<div v-for="(abSrcItem,index) in joinUsCont1" :key="index" class="abSrcCont">
+							<div>
+								<x-img v-lazy="abSrcItem.src" class="abSrcContImg"></x-img>
+								<div class="dectOne">{{abSrcItem.dectOne}}</div>
+								<div class="dectTwo">{{abSrcItem.dectTwo}}</div>
 							</div>
-							<div class="ftcl-cont">
-								<div class="ftcl-contF">
-									<div class="ftclc-item" v-for="(ftclcItem,index) in ftclcCont1">
-										<div>{{ftclcItem.textCont}}</div>
-									</div>
+						</div>
+					</div>					
+					</div>	
+			</div>
+			
+	        </TabPane>
+			 <!--运维服务-->
+	        <TabPane label="运维服务" >
+					<div class="joinUsCont greyBC pdtbRem2">
+							<div class="ctt-threeTitle">运维服务</div>	
+							<div class="ctt-fourTitle">
+								<div class="cttf-title">运维服务理念：</div>
+								<p  class="cttf-cont">
+									     致想咨询以“己欲立而立人，己欲达而达人”为服务理念，参考ITSS、ISO20000、ISO27001、ITIL等国内外先进的ITSM标准及实践，结合多年来丰富的电子政务运维服务管理经验，以成熟的运维管理体系为基础，为信息系统提供管理和技术的双重保障。华宇以客户的业务应用为核心，围绕客户的业务战略目标，提供从咨询规划、实施交付、检查监管到评估改进全生命周期的IT运维服务。 <br />
+								</p>
+								<div class="cttf-title">运维服务内容：</div>
+								<p  class="cttf-cont">
+									     咨询规划服务，提供信息化咨询规划、运维平台构建、运维项目咨询、运维体系评估四个服务产品，通过华宇科学实践的运维模型和方法论，结合客户业务现状，选择合适的运维模式，规划和构建科学的运维管理体系，建立高效的信息化管理流程。
+								</p>
+								<p  class="cttf-cont">
+									     运维管理服务，提供运维总包管理、运维服务台管理、运维绩效管理、运维资产资源管理四大项服务，通过对运维服务进行科学、全面、全程的管理，规避运维风险，提高运维效率，为客户提供满意的运维服务。
+								</p>					
+								<p  class="cttf-cont">
+									     运行保障服务，提供基础设施服务、业务应用服务和信息安全服务三个类别的多项服务，覆盖从IT基础设施、业务应用系统以及信息安全的各层次、各方面的IT运行维护和保障。
+								</p>					
+								<p  class="cttf-cont">
+									     数据运维服务，提供信息内容发布、数据质量管理、备份容灾管理、数据分析处理四大项服务，对客户信息化中各类系统数据、业务数据进行管理与维护，通过数据运维服务，实现客户信息系统“数据不丢”的工作目标。并进一步开展数据运维，挖掘数据的价值，促进“信息建设”向“信息服务”转型。
+								</p>					
+							</div>	
+					</div>       	
+	        	
+	        </TabPane>
+	  <!--系统建设-->
+	        <TabPane label="系统建设" >
+			<div class="joinUsCont pdtbRem2">
+					<div class="ctt-threeTitle">系统建设</div>	
+					<div class="ctt-fourTitle">
+						<div class="cttf-title">系统建设过程：</div>
+						<p  class="cttf-cont">
+							     应用软件产品开发的过程分为：规划、定义、开发、验证、确认和维护六个阶段。公司开发过程的管理采用了渐进式开发模型，遵循CMMI模型的管理要求，参考了“统一过程（Unified Process）”。开发过程中强调了面向市场的验证和反馈，在开发过程中鼓励尽早暴露风险，向用户提交符合需求的产品。
+						</p>
+						<div class="cttf-title">系统建设开发队伍：</div>
+						<p  class="cttf-cont">
+							     华宇建立了符合业务需要的组织架构、完备的开发管理制度、开发经费的预算管理和保障机制、开发团队的绩效管理及激励机制等管理措施，并且为开发团队构建了适合创新、鼓励创新的创新环境，还通过与国内知名大学及研究机构建立合作研究实验室等方式，实现产学研相结合，进一步加强开发队伍的研究技术能力和技术素质。
+						</p>					
+					</div>	
+					<div class="ctt-two">
+						<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont">
+							<div>
+								<x-img v-lazy="abSrcItem.src" class="abSrcContImg"></x-img>
+								<div class="dectOne">{{abSrcItem.dectOne}}</div>
+								<div class="dectTwo">{{abSrcItem.dectTwo}}</div>
+							</div>
+						</div>
+					</div>				
+			</div>      	
+	        	
+	        </TabPane>
+	 <!--解决方案-->
+	        <TabPane label="解决方案" >
+			<div class="joinUsCont greyBC pdtbRem2">
+					<div class="ctt-threeTitle">解决方案</div>	
+					<div class="ctt-fourTitle">
+						<p  class="cttf-cont">
+							     致想咨询是一家专业的软件开发服务提供商。拥有杰出的软件开发团队和顶尖的IT 精英，我们始终以满足客户个性化需求、确保软件适用性为原则，提供咨询服务。  <br />
+							　　为了使软件项目能够按照预定的成本、进度、质量顺利完成，我们制定了一套科学的管理流程，主要阶段如下 <br />
+							　　[销售期:] <br />
+							　　　　1、接到您的需求  <br />
+							　　　　2、上门进行需求调研 <br />
+							　　　　3、调研后按照需求进行评估（费用、开发周期） <br />
+							　　　　4、签署合同 <br /> <br />
+							
+							　　[执行期:] <br />
+							　　　　1、需求规格说明书以及系统原型  <br />
+							　　　　2、开发计划 <br />
+							　　　　3、开发+测试 <br />
+							　　　　4、试运行 <br />
+							　　　　5、验收 <br /> <br />
+							
+							　　[售后期:] <br />
+							　　　　1、进入系统维护期
+						</p>
+					</div>	
+			</div>       	
+	        	
+	        </TabPane>        
+	    </Tabs>			
+	
+	<!--联系我们KTC版本-->
+			<div class="findUs">
+					<div class="findUsCont">
+						<div class="abSrcContKTC"></div>
+						<div class="fuTrueCont">
+							<div class="ftc-left">
+								<div class="ftcl-title">
+									<span>关于我们</span>
+									<span>服务范围</span>
+									<span>联系我们</span>
 								</div>
-							<div class="ftcl-contF">
-									<div class="ftclc-item" v-for="(ftclcItem,index) in ftclcCont2">
-										<div>{{ftclcItem.textCont}}</div>
+								<div class="ftcl-cont">
+									<div class="ftcl-contF">
+										<div class="ftclc-item" v-for="(ftclcItem,index) in ftclcCont1">
+											<div>{{ftclcItem.textCont}}</div>
+										</div>
 									</div>
-								</div>								
-							<div class="ftcl-contF">
-									<div class="ftclc-item" v-for="(ftclcItem,index) in ftclcCont">
-										<div>{{ftclcItem.textCont}}</div>
-									</div>
-								</div>								
-								
+								<div class="ftcl-contF">
+										<div class="ftclc-item" v-for="(ftclcItem,index) in ftclcCont2">
+											<div>{{ftclcItem.textCont}}</div>
+										</div>
+									</div>								
+								<div class="ftcl-contF">
+										<div class="ftclc-item" v-for="(ftclcItem,index) in ftclcCont">
+											<div>{{ftclcItem.textCont}}</div>
+										</div>
+									</div>								
+									
+								</div>
 							</div>
+							<div class="ftc-right">
+								<span class="ftcrImg">© 2010-2018 The KeepThinking Consulting     沪ICP备11042995号</span>
+							</div>						
 						</div>
-						<div class="ftc-right">
-							<span class="ftcrImg">© 2010-2018 The KeepThinking Consulting     沪ICP备11042995号</span>
-						</div>						
-					</div>
-				</div>		
-		</div>
-<!--联系我们KTC版本-->		
-
+					</div>		
+			</div>
+	<!--联系我们KTC版本-->		
 
 		</div>
 
@@ -253,14 +264,22 @@
 	}
 </script>
 
-<style scoped="scoped" lang="scss">
+<style  lang="scss">
+	.demo-tabs-style1>.ivu-tabs.ivu-tabs-card .ivu-tabs-bar{
+     border-bottom: none;
+     margin-bottom: 0px;
+}
 @import "../../assets/scss/util";
 	.initCont {
 		font-size:0.38rem;
 		margin-top: 1rem;
 		/*内容区域*/
 		.homeContainer {
-
+			.ivu-tabs{
+				/*height: 0.6rem;*/
+				position: relative;
+				/*top: -.5rem;*/
+			}
 			/*公司文化*/
 			.joinUsCont{
 				width: 100%;

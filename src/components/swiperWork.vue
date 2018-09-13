@@ -46,6 +46,14 @@
 		      spaceBetween:30,
 			  breakpoints: { 
 			    //当宽度小于等于750
+			    1150: {
+			      slidesPerView: 5,
+			       spaceBetween:15,
+			    },			    
+			    950: {
+			      slidesPerView: 4,
+			       spaceBetween:15,
+			    },
 			    750: {
 			      slidesPerView: 3,
 			       spaceBetween:15,
