@@ -18,14 +18,14 @@
 			</div>
 <!--关于我们-->
 
-			<div class="ct-aboutAss pdtbRem2">
+			<div class="ct-aboutAss pdtbRem2 ">
 			    <Row>
 			        <Col :xs="24" :sm="8" :md="8" :lg="8" ><div class="abSrcCont"></div></Col>
 			        <Col :xs="24" :sm="16" :md="16" :lg="16" >
 								<div class="ctto-aboutCont">
 									<div class="p">致想咨询依据每个客户的特殊需要和业务环境，融入公司对数据的深刻洞察，并与我们的最佳实践和实战经验结合起来，力求为客户提供最佳的解决方案。并与客户长期合作，提供高质量服务、确保我们的客户能够受益于核心业务并获得可持续的竞争优势。</div>
-									<div class="p">在保证服务质量的前提下，我们尤其注重技术创新。在参与的很多大型项目中，都体现了我们的顾问对独特的业务需求背景的缜密思考。为改善经营业绩，优化管理流程，提升产品和服务的效率和效果，我们不懈探索、勇于实践，以引人入胜、超越期待的特色创造成果得到了客户的肯定。 </div>	
-									<div class="p">公司快速发展， 而我们对卓越品质以及与客户保持长期愉快合作的目标恒久不变。 同时我们将不懈地吸引并培养优秀的员工，为他们创造良好的发展空间，帮助他们在工作和生活中获得平衡与快乐。 </div>
+									<br /><div class="p">在保证服务质量的前提下，我们尤其注重技术创新。在参与的很多大型项目中，都体现了我们的顾问对独特的业务需求背景的缜密思考。为改善经营业绩，优化管理流程，提升产品和服务的效率和效果，我们不懈探索、勇于实践，以引人入胜、超越期待的特色创造成果得到了客户的肯定。 </div>	
+									<br /><div class="p">公司快速发展， 而我们对卓越品质以及与客户保持长期愉快合作的目标恒久不变。 同时我们将不懈地吸引并培养优秀的员工，为他们创造良好的发展空间，帮助他们在工作和生活中获得平衡与快乐。 </div>
 								</div>        	
 			        </Col>
 			    </Row>				
@@ -199,18 +199,17 @@
 				cttTwoImg:"../../../static/images/home/joinUs2.png",
 				//轮播2
 				cscItem:[
+				"../../../static/images/mine/changjiangcunchu.png",				
 				"../../../static/images/mine/zhongyuan.jpg",
 				"../../../static/images/mine/luolai.jpg",
 				"../../../static/images/mine/qingsuansuo.jpg",
-				"../../../static/images/mine/rrd.png",				
-				"../../../static/images/mine/zhongyuan.jpg",
-				"../../../static/images/mine/luolai.jpg",
-				"../../../static/images/mine/qingsuansuo.jpg",
-				"../../../static/images/mine/rrd.png",				
-				"../../../static/images/mine/zhongyuan.jpg",
-				"../../../static/images/mine/luolai.jpg",
-				"../../../static/images/mine/qingsuansuo.jpg",
-				"../../../static/images/mine/rrd.png",
+				"../../../static/images/mine/rrd.jpg",				
+				"../../../static/images/mine/feixun.jpg",				
+				"../../../static/images/mine/hand.jpg",				
+				"../../../static/images/mine/dg.jpg",				
+				"../../../static/images/mine/cmig.jpg",				
+				"../../../static/images/mine/lixun.jpg",				
+
 				],
 				crouselScrWidth:null, //每次滚动距离
 				//底部联系我们三个
@@ -343,12 +342,14 @@
 			/*关于我们*/
 			@media screen and (min-width:720px) {
 				.ct-aboutAss {
-					padding: 0 2.2rem;
+					/*padding: 0 2.2rem;*/
 					padding-bottom: 0.4rem;
+					 margin: 0 auto;
+   					 max-width: 1200px;
 					.abSrcCont {
 						float: right;
 						width: 100%;
-						min-height: 5rem;
+						min-height: 4.2rem;
 						height: 100%;
 						padding: 0.1rem;
 						margin-right: 0.3rem;
@@ -360,7 +361,8 @@
 					.ctto-aboutCont {
 						padding-right: 0;
 						color: #333;
-						font-size: 0.24rem;
+						/*font-size: 0.24rem;*/
+						font-size: 16px;
 						margin-left: 0.3rem;
 						&>.p {
 							text-indent: 0.48rem;
@@ -403,6 +405,7 @@
 				width: 100%;;
 				text-align: center;
 				background-color: #F4F4F4;
+				padding-top:0.3rem ;
 				div{
 					
 				}
@@ -486,7 +489,7 @@
 					text-align: center;
 					width: 100%;
 					color: $originColor;
-					padding: 0.3rem 0;
+					padding:0.3rem  0 0.6rem;
 				}	
 				.ctt-fourTitle{
 					font-size: 0.3rem;
@@ -533,7 +536,7 @@
 					text-align: center;
 					width: 100%;
 					color: $originColor;
-					padding: 0.3rem 0;
+					padding:0.3rem  0 0.6rem;
 				}	
 				.ctt-fourTitle{
 					font-size: 0.3rem;

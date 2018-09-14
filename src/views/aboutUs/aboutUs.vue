@@ -6,44 +6,63 @@
 <!--内容模块-->
 		<div class="homeContainer">
 <!--关于我们-->
-			<div class="ct-aboutAss pdtbRem2">
-				<div class="ctt-two">
-					<div class="abSrcCont"></div>
-				</div>
-				<div class="ctt-one">
-					<div class="ctto-about">公司简介</div>
-					<div class="ctto-aboutCont">
-						<div class="p">致想咨询总部设在上海，在北京、深圳及广州设有分公司，与多家合作伙伴建立长期战略合作，服务区域可覆盖全国20多个个城市。目前拥有员工35人，其中工程师32人，80%以上拥有劳动局及信息产业部颁发的高级工程师资质认证，思科CCNA、CCNP以及微软MCSE、MCTS等国际认证。截止2016年1月1日，瑞耀网络已成功为500多家企业提供IT服务。</div>
-						<div class="p">我们基于对众多中小企业在应用阶段面临问题与挑战的深刻认识，为您提供基于企业IT资产和应用的整合IT管理和技术服务，致力于为客户简化IT资产和应用的管理，提高可用性，体现IT的价值和效益，以满足中小企业对IT服务外包供应商的价值和创新要求。</div>	
-					</div>
-					
-				</div>
+	    <Tabs>
+	<!--咨询服务-->
+	        <TabPane label="公司简介">
+			<div class="ct-aboutAss pdtbRem2 ">
+				<div class="ctt-threeTitle">公司简介</div>	
+			    <Row>
+			        <Col :xs="24" :sm="8" :md="8" :lg="8" ><div class="abSrcCont"></div></Col>
+			        <Col :xs="24" :sm="16" :md="16" :lg="16" >
+								<div class="ctto-aboutCont">
+									<div class="p">致想咨询依据每个客户的特殊需要和业务环境，融入公司对数据的深刻洞察，并与我们的最佳实践和实战经验结合起来，力求为客户提供最佳的解决方案。并与客户长期合作，提供高质量服务、确保我们的客户能够受益于核心业务并获得可持续的竞争优势。</div>
+									<br /><div class="p">公司立足于IT服务产业，致力于IT外包的高质量服务与运营。公司由专业技术、市场等专业人才组成，在IT外包领域，拥有严密的专业领域技术及系统架构经验；拥有在IT外包行业多年丰富从业经验的管理者，对IT外包领域的深刻理解，以及对IT外包商务模式不断探索与了解，使我们对所处行业瞬息万变的市场情况和规律有充分的理解与掌握并提出主动式IT外包服务的全新理念。</div>
+									<br /><div class="p">在保证服务质量的前提下，我们尤其注重技术创新。在参与的很多大型项目中，都体现了我们的顾问对独特的业务需求背景的缜密思考。为改善经营业绩，优化管理流程，提升产品和服务的效率和效果，我们不懈探索、勇于实践，以引人入胜、超越期待的特色创造成果得到了客户的肯定。 </div>	
+								</div>        	
+			        </Col>
+			    </Row>				
 			</div>
+			
+	        </TabPane>
+			
+			<TabPane label="企业文化">
+			<!--企业文化-->
+					<div class="joinUsCont  pdtbRem2 ">
+							<div class="ctt-threeTitle">企业文化</div>	
+							<div class="ctt-fourTitle">
+								<div class="cttf-title">公司简介：</div>
+								<div  class="cttf-cont">
+									领先的信息技术和解决方案提供商。我们基于客户需求持续创新，在物联网传感器、控制器、移动物联网、云计算和大数据等几大领域都进行了长期探索和不懈积累。凭借在物体感知、学习、控制等领域的综合优势，公司已经成为信息技术产业的主要推动者之一。
+								</div>
+								<div class="cttf-title">公司荣誉：</div>
+								<div  class="cttf-cont">
+									2015年3月10日公司以“推动者”身份加入物联网权威国际组织之一ZigBee联盟，参与全球物联网以及智能家居标准的制定和完善。
+								</div>
+								<div class="cttf-title">公司理念：</div>
+								<div  class="cttf-cont">
+									信息技术最基本的目标是为人们提供一个舒适、安全、方便和高效的生活环境 . 对信息技术产品来说 , 最重要的 。 信息技术控制系统的经营商更要本着消费者至上的理念 ,本着从客户利益出发心态 , 以认真、负责、诚信的态度 。
+								</div>								
+							</div>	
+							<div class="ctt-two ">
+								<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont">
+									<div >
+										<x-img v-lazy="abSrcItem.src" class="abSrcContImg"></x-img>
+										<div class="dectOne">{{abSrcItem.dectOne}}</div>
+										<div class="dectTwo">{{abSrcItem.dectTwo}}</div>
+									</div>
+								</div>
+							</div>				
+					</div>					
+			</TabPane>
+			
+			<TabPane label="员工风采">
+			<!--员工风采-->
+					<div class="whyjoinUsCont">
+							<div class="peopleColor"></div>
+					</div>				
+			</TabPane>			
+		</Tabs>
 
-<!--服务领域-->
-		<div class="joinUsCont greyBC pdtbRem2">
-				<div class="ctt-threeTitle">企业文化</div>	
-				<div class="ctt-fourTitle">
-					<div class="cttf-title">公司理念</div>
-					<div  class="cttf-cont">
-						信息技术最基本的目标是为人们提供一个舒适、安全、方便和高效的生活环境 . 对信息技术产品来说 , 最重要的 。 信息技术控制系统的经营商更要本着消费者至上的理念 ,本着从客户利益出发心态 , 以认真、负责、诚信的态度 。
-					</div>
-				</div>	
-				<div class="ctt-two">
-					<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont">
-						<div>
-							<x-img v-lazy="abSrcItem.src" class="abSrcContImg"></x-img>
-							<div class="dectOne">{{abSrcItem.dectOne}}</div>
-							<div class="dectTwo">{{abSrcItem.dectTwo}}</div>
-						</div>
-					</div>
-				</div>				
-		</div>			
-
-<!--员工风采-->
-		<div class="whyjoinUsCont">
-				<div class="peopleColor"></div>
-		</div>
 
 <!--联系我们KTC版本-->
 		<div class="findUs">
@@ -114,19 +133,23 @@
 				],
 				//服务领域
 				joinUsCont:[{
-					src:"http://bk.image.styleweb.com.cn/2017/2/22/1765_izgmrrt1.png?imageView2/2/w/501/q/100",
-					dectOne:"严格技术监督",
+					src:"http://www.xintonginfo.com/Skins/Default/static/css/module/about/img/09.png",
+					dectOne:"愿景",
+					dectTwo:"打造长三角IT服务领先品牌",
 					},{
-					src:"http://bk.image.styleweb.com.cn/2017/2/22/1765_izgmrru4.png?imageView2/2/w/501/q/100",
-					dectOne:"高效操作",
+					src:"http://www.xintonginfo.com/Skins/Default/static/css/module/about/img/07.png",
+					dectOne:"使命",
+					dectTwo:"为客户和社会创造更大的价值",
 					},
 					{
-					src:"http://bk.image.styleweb.com.cn/2017/2/22/1765_izgmrrt3.png?imageView2/2/w/501/q/100",
-					dectOne:"负担社会责任",
+					src:"http://www.xintonginfo.com/Skins/Default/static/css/module/about/img/05.png",
+					dectOne:"服务宗旨",
+					dectTwo:"始终勤快，始终热情，始终专业",
 					},
 					{
-					src:"http://bk.image.styleweb.com.cn/2017/2/22/1765_izgmrrsz.png?imageView2/2/w/501/q/100",
-					dectOne:"以客户利益为上",
+					src:"http://www.xintonginfo.com/Skins/Default/static/css/module/about/img/08.png",
+					dectOne:"服务理念",
+					dectTwo:"服务见于细节，细节决定成败",
 					}
 				],			
 				//为什么加入我们
@@ -214,42 +237,72 @@
 		/*内容区域*/
 		.homeContainer {
 
-			/*关于我们*/
-			.ct-aboutAss{
-				display: flex;
-				&>div,p{
-					width: 50%;
-					padding: 0.1rem;
-				}
-				.ctt-one{
-					.ctto-about{
-						color:#000000;
-						font-size: 0.28rem;
+/*关于我们*/
+			@media screen and (min-width:720px) {
+				.ct-aboutAss {
+					/*padding: 0 2.2rem;*/
+					padding-bottom: 0.4rem;
+					 margin: 0 auto;
+   					 max-width: 1200px;
+   					.ctt-threeTitle{
+						text-align: center;
+						width: 100%;
+						color: $originColor;
+						padding: 0.1rem 0 0.2rem;
+					}	
+					.abSrcCont {
+						float: right;
+						width: 100%;
+						min-height: 5.2rem;
+						height: 100%;
+						padding: 0.1rem;
+						margin-right: 0.3rem;
+						background-image: url("../../../static/images/home/About-Us2.jpg");
+						background-repeat: no-repeat;
+						background-size: 100% 100%;
+						border-radius: 8px;
 					}
-					.ctto-aboutCont{
+					.ctto-aboutCont {
 						padding-right: 0;
-						color:#333;
-						font-size: 0.2rem;		
-						&>.p{
+						color: #333;
+						/*font-size: 0.24rem;*/
+						font-size: 16px;
+						margin-left: 0.3rem;
+						&>.p {
 							text-indent: 0.48rem;
-							width: 88%;
-							line-height: 0.5rem;
-						}				
-					}
-				}
-				.ctt-two{
-					display: flex;
-					justify-content: flex-end;
-					.abSrcCont{
-						width: 88%;
-						max-height: 4.5rem;
-						padding:0.1rem;
-						background-image: url("http://www.itwaibaow.com/statics/images/About-Us.jpg");
-						background-repeat:no-repeat ;
-						background-size:100% 100% ;
+							width: 100%;
+							line-height: 0.46rem;
+						}
 					}
 				}
 			}
+			
+			@media screen and (max-width:720px) {
+				.ct-aboutAss {
+					padding: 0 0.5rem;
+					padding-bottom: 0.4rem;
+					.abSrcCont {
+						width: 100%;
+						min-height: 5rem;
+						padding: 0.1rem;
+						background-image: url("../../../static/images/home/About-Us2.jpg");
+						background-repeat: no-repeat;
+						background-size: 100% 100%;
+						border-radius: 8px;
+						margin-bottom: 0.2rem;
+					}
+					.ctto-aboutCont {
+						padding-right: 0;
+						color: #333;
+						font-size: 0.24rem;
+						&>.p {
+							text-indent: 0.48rem;
+							width: 100%;
+							line-height: 0.6rem;
+						}
+					}
+				}
+			}	
 			
 			/*公司文化*/
 			.joinUsCont{
@@ -282,27 +335,41 @@
 				}		
 				.ctt-two{
 					width: 88%;
-					margin: 0 auto;					
+					margin: 0.4rem auto 0;
+					display: flex;
+					justify-content: space-around;	
+					padding: 0 40px;
 					.abSrcCont{
-						width: calc(100%/4);
+						width: 270px;
+						height: 270px;
+						margin-right: 50px;
 						display: inline-block;
 						padding:0.3rem;
+						background-color:#f6f6f6;
+						border:1px solid  #eee;
+						&:hover{
+							box-shadow: 0 0 0.2rem #BBB;
+						}
 						div{
+							width: 100%;
+							height: 100%;
 							display: flex;
 							flex-direction: column;
-							justify-content: center;
+							justify-content: flex-end;
 							align-items: center;
 							font-size: 0.22rem;
 						.abSrcContImg{
-							width:0.6rem;
-							height:0.6rem;
+							width:1rem;
+							height:1rem;
+							margin-top: 0.4rem;
 						}
 						.dectOne{
-							font-weight: 700;
-							padding: 0.2rem 0 0.1rem 0;
+							font-size: 0.3rem;
 						}
 						.dectTwo{
-							max-width: 4rem;
+							margin-top: 0.4rem;
+							height: 1rem;
+							font-size: 0.22rem;
 						}
 						}
 					}
@@ -311,7 +378,7 @@
 			
 /*为什么加入我们*/
 			.whyjoinUsCont{
-				height: 10rem;
+				height: 8rem;
 				width: 100%;
 				background-color: rgb(60,60,60);
 				.peopleColor{

@@ -4,7 +4,7 @@
 			<header-banner :cont="bannerCont"></header-banner>
 		</div>
 <!--内容模块-->
-		<div class="homeContainer demo-tabs-style1">
+		<div class="homeContainer">
 	    <Tabs>
 	<!--咨询服务-->
 	        <TabPane label="咨询服务">
@@ -34,7 +34,7 @@
 	        </TabPane>
 			 <!--运维服务-->
 	        <TabPane label="运维服务" >
-					<div class="joinUsCont greyBC pdtbRem2">
+					<div class="joinUsCont pdtbRem2">
 							<div class="ctt-threeTitle">运维服务</div>	
 							<div class="ctt-fourTitle">
 								<div class="cttf-title">运维服务理念：</div>
@@ -86,7 +86,7 @@
 	        </TabPane>
 	 <!--解决方案-->
 	        <TabPane label="解决方案" >
-			<div class="joinUsCont greyBC pdtbRem2">
+			<div class="joinUsCont pdtbRem2">
 					<div class="ctt-threeTitle">解决方案</div>	
 					<div class="ctt-fourTitle">
 						<p  class="cttf-cont">
@@ -265,21 +265,12 @@
 </script>
 
 <style  lang="scss">
-	.demo-tabs-style1>.ivu-tabs.ivu-tabs-card .ivu-tabs-bar{
-     border-bottom: none;
-     margin-bottom: 0px;
-}
 @import "../../assets/scss/util";
 	.initCont {
 		font-size:0.38rem;
 		margin-top: 1rem;
 		/*内容区域*/
 		.homeContainer {
-			.ivu-tabs{
-				/*height: 0.6rem;*/
-				position: relative;
-				/*top: -.5rem;*/
-			}
 			/*公司文化*/
 			.joinUsCont{
 				width: 100%;
@@ -289,7 +280,7 @@
 					text-align: center;
 					width: 100%;
 					color: $originColor;
-					padding: 0.3rem 0.1rem 0;
+					padding: 0.1rem 0.1rem 0;
 				}	
 				.ctt-fourTitle{
 					font-size: 0.3rem;
@@ -396,6 +387,7 @@
 				color: #fff;
 				.findUsCont{
 					position: relative;
+					bottom: 0;
 					.abSrcContKTC{
 						height: 4rem;
 						background-color: #333;

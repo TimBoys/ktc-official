@@ -185,7 +185,7 @@
 
 	.initCont{
 		font-size:0.38rem;
-		padding-top:1rem ;
+		/*padding-top:1rem ;*/
 		.swiperCont{
 			padding:0 1rem;
 		}
