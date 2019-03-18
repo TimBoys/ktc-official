@@ -6,14 +6,11 @@
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse"
 				data-target="#example-navbar-collapse">
-			<!--<span class="sr-only">切换导航</span>-->
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
 		</button>
-
 		<a class="navbar-brand nsjt-brand" href="#">
-			<!--<x-img v-lazy="sjtLogo"  class="sjtLogo_img"></x-img>-->
 			KeepThinking Consulting
 		</a>
 	</div>
@@ -27,15 +24,8 @@
 		</ul>
 		
 	</div>
-	
-		<!--<div class="navlocalLang">
-			<span class="localLang navbar-right" @click="changeLang(localLang)">{{showLan}}</span>
-		</div>	-->
-	
-	
 	</div>
 </nav>
-  	
   	
       <transition>
       	<!--<keep-alive>-->
@@ -49,10 +39,8 @@
 
 <script>
 import Rem from '@/assets/js/rem';
-import VueDB from './util/vue-db/vue-db-long';
 import { XImg } from 'vux';
 new Rem();
-var DB = new VueDB();
 
 export default {
   name: 'App',
@@ -67,18 +55,15 @@ export default {
   watch:{
   	"$route"(to,from){
   			this.nowUrl = to.fullPath;
-//			console.dir(this.$refs.divCollapse.classList)
+//			console.dir(this.$refs.divCollapse.classList);
   			if (this.$refs.divCollapse.classList[this.$refs.divCollapse.classList.length -1] == "in") {
 					$(".divCollapse").removeClass("in").attr("aria-expanded",false);
 					$('#collapse').addClass("collapsed").attr("aria-expanded",false);
-					
   			}
   	}
   },
 	mounted:function(){
-			//初始化获取本地语言
-			this.initLocalLang();
-			
+			//初始化浏览器页面大小 
 			this.initResize();		
 	},
 	computed:{
@@ -87,46 +72,22 @@ export default {
 			}
 		},
 	methods:{
-					//初始化获取本地语言
-			initLocalLang() {
-				if(!DB.getItem("localLang").toString()) {
-					this.localLang = "zh";
-					DB.setItem("localLang","en");
-				} else {
-					this.localLang = DB.getItem("localLang").toString() == "en" ? "zh" : "en";
-				}
-			},
 			//初始化导航
 			initNav(e){
-//				console.log(e.srcElement.className)
+//			console.log(e.srcElement.className);
 				if (e.srcElement.className != "icon-bar") {
 						$(".divCollapse").removeClass("in").attr("aria-expanded",false);
 						$('#collapse').addClass("collapsed").attr("aria-expanded",false);							
 				}
-			},		
-			//切换语言
-			changeLang(item) {
-				console.log(item);
-				if(item == "zh") {
-					this.localLang = "en";
-					DB.setItem("localLang", "zh");
-				} else {
-					this.localLang = "zh";
-					DB.setItem("localLang", "en");
-				}
-				window.location.reload();
-			},	
-		
+			},
 			//重置浏览器大小
 			initResize(){
 				var _this = this;
 			 _this.changeNavColor();
 				$(window).resize(function () {          //当浏览器大小变化时
-//				    console.log($(window).width());          //浏览器时下窗口可视区域高度
+//				  console.log($(window).width());          //浏览器时下窗口可视区域高度
 				    _this.changeNavColor();
-
 				});
-				
 			},
 			changeNavColor(){
 					if($(window).width() < 740){

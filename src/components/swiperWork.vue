@@ -1,10 +1,9 @@
 <template>
 	<div class="swiperWork">
 		
-		
-<div class="swiper-container swiper-container-horizontal">
+	<div class="swiper-container swiper-container-horizontal">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" v-for="(item,index) in cscItem">
+      <div class="swiper-slide" v-for="(item,index) in cscItem" :key="index">
       	<img class="carouselImg" :src="item"/>
       	<!--<x-img class="carouselImg" v-lazy="item" /></x-img>-->
       </div>
@@ -26,7 +25,7 @@
 	var DB = new VueDB();
 
 	export default {
-		name: 'test',
+		name: 'swiperWork',
 		data() {
 			return {
 			}
@@ -40,7 +39,7 @@
 		computed: {
 		},
 		mounted: function() {
-			console.log(this.cscItem)
+			// console.log(this.cscItem);
 		    var swiper = new Swiper('.swiper-container', {
 		      slidesPerView: 6,
 		      spaceBetween:30,
@@ -94,8 +93,6 @@
     .swiper-container {
       width:82%;
       height: 3rem;
-    }
-    .swiper-wrapper{
     }
     .swiper-slide {
       text-align: center;

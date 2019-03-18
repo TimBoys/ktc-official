@@ -4,10 +4,6 @@
 			<header-banner :cont="bannerCont"></header-banner>
 		</div>		
 		
-    	<div class="juheadCont">
-    		<!--<x-img class="joinUsHeadImg" v-lazy="joinUsHeadImg" /></x-img>-->
-    	</div>
-
 <!--提交信息-->
     	<div class="formCont">
 				<div class="ctt-oneTitle">联系我们，获取免费资料，进一步了解项目</div>    	
@@ -33,50 +29,11 @@
 	    				  <Button type="warning" class="formSubmit" @click.native="formSubmit">提交</Button>
     				  </div>    				  
     				  
-    				  
-    				  
     			</div>
     	</div>
  
- 
-<!--联系我们KTC版本-->
-		<div class="findUs">
-				<div class="findUsCont">
-					<div class="abSrcContKTC"></div>
-					<div class="fuTrueCont">
-						<div class="ftc-left">
-							<div class="ftcl-title">
-								<span>关于我们</span>
-								<span>服务范围</span>
-								<span>联系我们</span>
-							</div>
-							<div class="ftcl-cont">
-								<div class="ftcl-contF">
-									<div class="ftclc-item" v-for="(ftclcItem,index) in ftclcCont1">
-										<div>{{ftclcItem.textCont}}</div>
-									</div>
-								</div>
-							<div class="ftcl-contF">
-									<div class="ftclc-item" v-for="(ftclcItem,index) in ftclcCont2">
-										<div>{{ftclcItem.textCont}}</div>
-									</div>
-								</div>								
-							<div class="ftcl-contF">
-									<div class="ftclc-item" v-for="(ftclcItem,index) in ftclcCont">
-										<div>{{ftclcItem.textCont}}</div>
-									</div>
-								</div>								
-								
-							</div>
-						</div>
-						<div class="ftc-right">
-							<span class="ftcrImg">© 2010-2018 The KeepThinking Consulting     沪ICP备11042995号</span>
-						</div>						
-					</div>
-				</div>		
-		</div>
-<!--联系我们KTC版本-->	
- 
+ 		<!-- 关于我们 -->
+		<bottomAboutUs></bottomAboutUs>	
  
 	</div>
 </template>
@@ -84,16 +41,13 @@
 <script>
 	import { XImg, Flexbox, FlexboxItem, Actionsheet } from 'vux';
 	import headerBanner from '../../components/header-banner';
-	import swiperWork from '../../components/swiperWork';
+	import bottomAboutUs from '../../components/bottomAboutUs';
 	export default {
-		name: "home",
+		name: "applyJoin",
 		data() {
 			return {
-				//轮播
-				cscItem:["../../../static/images/home/testImg1.jpg","../../../static/images/home/testImg2.jpg","../../../static/images/home/testImg3.jpg","../../../static/images/home/testImg4.jpg","../../../static/images/home/testImg5.jpg","../../../static/images/home/testImg6.jpg","../../../static/images/home/testImg7.jpg","../../../static/images/home/testImg8.jpg","../../../static/images/home/testImg2.jpg","../../../static/images/home/testImg1.jpg",],
-				bannerCont:{bannerUrl:"http://www.itwaibaow.com/uploadfile/2016/0518/20160518085709729.jpg",bannerTitle:"联系我们"},
+				 bannerCont:{bannerUrl:"http://www.itwaibaow.com/uploadfile/2016/0518/20160518085709729.jpg",bannerTitle:"联系我们"},
 				 joinUsHeadImg:"../../../static/images/home/joinUsHeadImg.jpg",
-				 aboutImg:"../../../static/images/home/testImg7.jpg",
 				//底部联系我们三个
 				ftclcCont1:[{
 					textCont:"企业管理咨询"
@@ -115,9 +69,8 @@
 					textCont:"公司电话:63300002"
 				},{
 					textCont:"hr@keepthinking.com.cn"
-				}],				
-				//二维码
-				ecode:"../../static/images/mine/ecode.png",		
+				}],	
+				//表单提交 
 				submitData:{
 					name:"",
 					telephone:"",
@@ -169,12 +122,12 @@
 			},
 		},
 		components: {
-			swiperWork,
 			headerBanner,
 			XImg,
 			Flexbox,
 			FlexboxItem,
-			Actionsheet
+			Actionsheet,
+			bottomAboutUs
 		}			
 
 	}
@@ -185,13 +138,12 @@
 
 	.initCont{
 		font-size:0.38rem;
-		/*padding-top:1rem ;*/
+		margin-top:1rem ;
 		.swiperCont{
 			padding:0 1rem;
 		}
 		.joinUsHeadImg{
 			height: 4.4rem;
-			
 		}
 		
 		/*提交用户信息*/
@@ -233,76 +185,6 @@
 				}
 			}
 
-/*联系我们*/
-			/*联系我们*/
-			.findUs{
-				width: 100%;
-				/*margin-top: 0.2rem;*/
-				color: #fff;
-				.findUsCont{
-					position: relative;
-					.abSrcContKTC{
-						height: 4rem;
-						background-color: #333;
-					}
-					.abSrcContImg{
-						height: 4rem;
-					}
-					.fuTrueCont{
-						position: absolute;
-						top: 0;
-						display: flex;
-						background-color: rgba(0,0,0,0.4);
-						width:100%;
-						height: 4rem;
-						flex-direction: column;
-						.ftc-left{
-							padding: 0.4rem 0;
-							.ftcl-title{
-								padding-bottom:0.2rem ;
-								display: flex;
-								justify-content: space-between;
-								span{
-									flex: 1;
-									text-align: center;
-								}
-							}
-							.ftcl-cont{
-								font-size: 0.28rem;
-								display: flex;
-								justify-content: space-around;	
-								.ftcl-contF{	
-									display: flex;			
-									flex-direction: column;			
-									align-items: center;
-									flex: 1;
-									.ftclc-item{
-										margin-bottom: 0.08rem;
-										display: flex;
-										text-align: center;
-										.ftcrc-Img{
-											width: .5rem;
-											height: .5rem;
-										}
-									}
-								}
-							}
-						}
-						.ftc-right{
-							font-size: 0.26rem;
-							.ftcrImg{
-								display: block;
-								width: 100%;
-								text-align: center;
-							}
-						}
-					}
 
-				}				
-							
-			}	
-
-		
-		
 	}
 </style>

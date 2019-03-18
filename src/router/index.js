@@ -3,8 +3,6 @@ import Router from 'vue-router'
 import _ from 'lodash'
 
 Router.prototype.openPage = function(link,query){
-//	console.log(link)
-//	console.log(query)
 	this.push({
 		path:link,
 		query:_.assignIn({

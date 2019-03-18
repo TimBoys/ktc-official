@@ -25,8 +25,8 @@
 			}
 		},
 		mounted:function(){
-			console.log(this.cont)
-			console.log(this.isActive)
+			// console.log(this.cont)
+			// console.log(this.isActive)
 			setTimeout(()=>{
 				this.isActive = true;
 			},200)
@@ -49,7 +49,6 @@
 .bannerCont{
 	height: 2.2rem;
 	width:100%;
-	/*background-image: url("http://www.itwaibaow.com/uploadfile/2016/0518/20160518085631527.jpg");*/
 	background-repeat:no-repeat ;
 	background-size:100% 100% ;
 	display:flex;

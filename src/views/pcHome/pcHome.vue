@@ -4,7 +4,7 @@
 		<Carousel v-model="value1" loop autoplay :autoplay-speed="4000" class="carouselCont">
 			<CarouselItem v-for="(imgItem,index) in banner" :key="index">
 				<div class="demo-carousel">
-					<x-img class="carouselImg" v-lazy="imgItem" /></x-img>
+					<x-img class="carouselImg" v-lazy="imgItem"></x-img>
 				</div>
 			</CarouselItem>
 		</Carousel>
@@ -69,60 +69,12 @@
 				<!--模态框2-->
 				<div class="carouseScroll">
 					<swiperWork :cscItem="cscItem"></swiperWork>
-					<!--<div class="csModel">
-						<div class="cs-pre" @click="csNext"><</div>
-						<div class="allCont" ref="allCsCont">
-						<div class="csCont" >
-							<div class="cscItem" v-for="(cscOneItem,index) in cscItem" :key="index">
-								<x-img v-lazy="cscOneItem" class="cscItemImg"></x-img>
-							</div>		
-						</div>
-						</div>
-						<div class="cs-next" @click="csPre">></div>
-					</div>-->
 				</div>
 				<!--模态框2-->
-				
 		</div>
 
-
-<!--联系我们KTC版本-->
-		<div class="findUs">
-				<div class="findUsCont">
-					<div class="abSrcContKTC"></div>
-					<div class="fuTrueCont">
-						<div class="ftc-left">
-							<div class="ftcl-title">
-								<span>关于我们</span>
-								<span>服务范围</span>
-								<span>联系我们</span>
-							</div>
-							<div class="ftcl-cont">
-								<div class="ftcl-contF">
-									<div class="ftclc-item" v-for="(ftclcItem,index) in ftclcCont1">
-										<div>{{ftclcItem.textCont}}</div>
-									</div>
-								</div>
-							<div class="ftcl-contF">
-									<div class="ftclc-item" v-for="(ftclcItem,index) in ftclcCont2">
-										<div>{{ftclcItem.textCont}}</div>
-									</div>
-								</div>								
-							<div class="ftcl-contF">
-									<div class="ftclc-item" v-for="(ftclcItem,index) in ftclcCont">
-										<div>{{ftclcItem.textCont}}</div>
-									</div>
-								</div>								
-								
-							</div>
-						</div>
-						<div class="ftc-right">
-							<span class="ftcrImg">© 2010-2018 The KeepThinking Consulting     沪ICP备11042995号</span>
-						</div>						
-					</div>
-				</div>		
-		</div>
-<!--联系我们KTC版本-->		
+		<!-- 关于我们 -->
+		<bottomAboutUs></bottomAboutUs>
 
 
 		</div>
@@ -131,24 +83,18 @@
 </template>
 
 <script>
-	import VueDB from '../../util/vue-db/vue-db-long'
 	import { XImg, Flexbox, FlexboxItem, Actionsheet } from 'vux';
 	import swiperWork from '../../components/swiperWork';
-	import _ from 'lodash';	
-	var DB = new VueDB();
-	var sivTime = null;
-	var crouselScrWidth = null;
-	var canScrollWidth = null;
-	var timeoutflag = null;
+	import bottomAboutUs from '../../components/bottomAboutUs';
 	export default {
-		name: "home",
+		name: "pcHome",
 		data() {
 			return {
-				ktcAboutUs:"http://www.itwaibaow.com/statics/images/About-Us.jpg",
-				
+				// 轮播图
 				banner: ["http://www.keepthinking.com.cn/en/img/home.jpg","http://www.keepthinking.com.cn/en/img/succ.jpg","../../../static/images/home/banner3.jpg"],
 				value1: 0,
-				aboutCont:"素匠泰茶有别于市面上的传统奶茶，从名字上大家可以知道，我们是主营泰式奶茶的，在市面上港式、台式奶茶层出不穷的时代，我们想让大家喝到不一样的饮品，感受到生活中与众不同的小确幸。",
+				// 公司简介
+				ktcAboutUs:"http://www.itwaibaow.com/statics/images/About-Us.jpg",
 				//关于我们
 				aboutImg:[
 					"http://www.keepthinking.com.cn/en/img/home.jpg",
@@ -212,90 +158,21 @@
 
 				],
 				crouselScrWidth:null, //每次滚动距离
-				//底部联系我们三个
-				ftclcCont1:[{
-					textCont:"企业管理咨询"
-				},{
-					textCont:"信息技术服务"
-				},{
-					textCont:"应用维护服务"
-				}],
-				ftclcCont2:[{
-					textCont:"管理咨询服务"
-				},{
-					textCont:"企业it系统规划"
-				},{
-					textCont:"it整体外包"
-				}],				
-				ftclcCont:[{
-					textCont:"HR电话:15221175771(刘)"
-				},{
-					textCont:"公司电话:63300002"
-				},{
-					textCont:"hr@keepthinking.com.cn"
-				}],
-				//二维码
-//				ecode:"../../static/images/mine/ecode.png",
-				ecode:"",
-				//首页最热的三类的图标
-				detailFireSrc: [],
 			}
 		},
 		mounted: function() {
-			//初始化轮播图2
-//			this.allCsCont2();
-			//初始化店铺
-			this.initGetStoreId();
 		},
 
 		methods: {
-			//初始化店铺获取店铺编号
-			initGetStoreId() {
 
-			},
-			
-			//轮播2
-//			allCsCont2(){
-//				setTimeout(()=>{
-//					canScrollWidth = this.$refs.allCsCont.scrollWidth - this.$refs.allCsCont.clientWidth; //可以滚动的宽度
-//					crouselScrWidth = this.$refs.allCsCont.scrollWidth / 10;
-//				console.dir(this.$refs.allCsCont.scrollWidth)
-//				sivTime =  setInterval(()=>{
-//					this.$refs.allCsCont.scrollLeft += 1;
-////					console.log(this.$refs.allCsCont.scrollLeft)
-//					if(this.$refs.allCsCont.scrollLeft >= canScrollWidth -1	){
-//						this.$refs.allCsCont.scrollLeft = 0;
-//					}
-//				},10)
-//				},1000)
-//				
-//			},
-//			//右
-//			csPre(){
-//				clearInterval(sivTime);
-////				console.log("csPre")
-//				this.$refs.allCsCont.scrollLeft += crouselScrWidth;
-//				if(this.$refs.allCsCont.scrollLeft >= canScrollWidth -1){
-//					this.$refs.allCsCont.scrollLeft = 0;
-//				}
-//
-//			},
-//			//左
-//			csNext(){
-//				clearInterval(sivTime);
-////				console.log("csNext")
-//				this.$refs.allCsCont.scrollLeft -= crouselScrWidth;
-//				if(this.$refs.allCsCont.scrollLeft <= 0){
-//					this.$refs.allCsCont.scrollLeft = this.$refs.allCsCont.clientWidth;
-//				}				
-//			}
 		},
 		components: {
 			swiperWork,
 			XImg,
 			Flexbox,
 			FlexboxItem,
-			Actionsheet
+			Actionsheet,
+			bottomAboutUs
 		}
 
 	}
@@ -575,73 +452,7 @@
 			}				
 			
 				
-/*联系我们*/
-			.findUs{
-				width: 100%;
-				/*margin-top: 0.2rem;*/
-				color: #fff;
-				.findUsCont{
-					position: relative;
-					.abSrcContKTC{
-						height: 4rem;
-						background-color: #333;
-					}
-					.abSrcContImg{
-						height: 4rem;
-					}
-					.fuTrueCont{
-						position: absolute;
-						top: 0;
-						display: flex;
-						background-color: rgba(0,0,0,0.4);
-						width:100%;
-						height: 4rem;
-						flex-direction: column;
-						.ftc-left{
-							padding: 0.4rem 0;
-							.ftcl-title{
-								padding-bottom:0.2rem ;
-								display: flex;
-								justify-content: space-between;
-								span{
-									flex: 1;
-									text-align: center;
-								}
-							}
-							.ftcl-cont{
-								font-size: 0.28rem;
-								display: flex;
-								justify-content: space-around;	
-								.ftcl-contF{	
-									display: flex;			
-									flex-direction: column;			
-									align-items: center;
-									flex: 1;
-									.ftclc-item{
-										margin-bottom: 0.08rem;
-										display: flex;
-										text-align: center;
-										.ftcrc-Img{
-											width: .5rem;
-											height: .5rem;
-										}
-									}
-								}
-							}
-						}
-						.ftc-right{
-							font-size: 0.26rem;
-							.ftcrImg{
-								display: block;
-								width: 100%;
-								text-align: center;
-							}
-						}
-					}
-
-				}				
-							
-			}			
+			
 				
 			
 		}

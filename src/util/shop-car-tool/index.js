@@ -58,7 +58,7 @@ class shopCarTool{
 	    }else{
 	    	console.log("商品不在购物车中")
 	     	// 过滤需要的信息
-	      	var filter = {};
+	    var filter = {};
 			filter.length =1;
 			//选择规格数组和规格所属的商品
 			filter.itemGuige = [{
@@ -79,8 +79,6 @@ class shopCarTool{
 	
 	
   minus(value){
-	console.log(value)
-	console.log(this.shopCarDB)
 
 	var theItem = this.shopCarDB[value.goodsItem.goodsId].itemGuige; //再购物车中找到减去的商品
 	var theGoodsLen = this.shopCarDB[value.goodsItem.goodsId]; //这个商品的数量
@@ -118,7 +116,7 @@ class shopCarTool{
 	    for(var i in this.shopCarDB){
 	      n += this.shopCarDB[i].length
 	    }
-	    console.log(this.shopCarDB)
+	    // console.log(this.shopCarDB)
 	    console.log(n)
 	    return n		
 	}

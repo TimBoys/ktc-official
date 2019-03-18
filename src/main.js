@@ -18,15 +18,8 @@ Vue.use(iView);
 
 //配置axios
 axios.defaults.headers.get['Content-Type'] = 'application/json';
+
 //let apiUrl = 'http://www.95cfun.xyz'; 
-//let apiUrl = 'https://www.primes-thaitea.com';  //客户域名
-//// 根据 process.env.HOST 的值判断当前是什么环境
-//// 命令：npm run build -- test ，process.env.HOST就设置为：'test'
-//let HOST = process.env.HOST;
-//HOST = HOST === 'prod' ? '' : '-' + HOST;
-// 
-//apiUrl = 'http://api'+HOST+'.demo.com';
-//console.log(apiUrl)
 //axios.defaults.baseURL = apiUrl;
 
 Vue.prototype.$http = axios;

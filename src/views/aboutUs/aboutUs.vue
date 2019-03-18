@@ -63,45 +63,8 @@
 			</TabPane>			
 		</Tabs>
 
-
-<!--联系我们KTC版本-->
-		<div class="findUs">
-				<div class="findUsCont">
-					<div class="abSrcContKTC"></div>
-					<div class="fuTrueCont">
-						<div class="ftc-left">
-							<div class="ftcl-title">
-								<span>关于我们</span>
-								<span>服务范围</span>
-								<span>联系我们</span>
-							</div>
-							<div class="ftcl-cont">
-								<div class="ftcl-contF">
-									<div class="ftclc-item" v-for="(ftclcItem,index) in ftclcCont1">
-										<div>{{ftclcItem.textCont}}</div>
-									</div>
-								</div>
-							<div class="ftcl-contF">
-									<div class="ftclc-item" v-for="(ftclcItem,index) in ftclcCont2">
-										<div>{{ftclcItem.textCont}}</div>
-									</div>
-								</div>								
-							<div class="ftcl-contF">
-									<div class="ftclc-item" v-for="(ftclcItem,index) in ftclcCont">
-										<div>{{ftclcItem.textCont}}</div>
-									</div>
-								</div>								
-								
-							</div>
-						</div>
-						<div class="ftc-right">
-							<span class="ftcrImg">© 2010-2018 The KeepThinking Consulting     沪ICP备11042995号</span>
-						</div>						
-					</div>
-				</div>		
-		</div>
-<!--联系我们KTC版本-->		
-
+		<!-- 关于我们 -->
+		<bottomAboutUs></bottomAboutUs>
 
 		</div>
 
@@ -109,23 +72,15 @@
 </template>
 
 <script>
-	import VueDB from '../../util/vue-db/vue-db-long'
 	import { XImg, Flexbox, FlexboxItem, Actionsheet } from 'vux';
 	import headerBanner from '../../components/header-banner';
-	import _ from 'lodash';	
-	var DB = new VueDB();
-	var sivTime = null;
-	var crouselScrWidth = null;
-	var canScrollWidth = null;
-	var timeoutflag = null;
+	import bottomAboutUs from '../../components/bottomAboutUs';
 	export default {
 		name: "aboutUs",
 		data() {
 			return {
+				// 导航轮播图
 				bannerCont:{bannerUrl:"http://www.itwaibaow.com/uploadfile/2016/0518/20160518085631527.jpg",bannerTitle:"关于我们"},
-				ktcAboutUs:"http://www.itwaibaow.com/statics/images/About-Us.jpg",
-				peopleColorUrl:"http://www.itwaibaow.com/statics/css/img/our_team.jpg",
-				aboutCont:"素匠泰茶有别于市面上的传统奶茶，从名字上大家可以知道，我们是主营泰式奶茶的，在市面上港式、台式奶茶层出不穷的时代，我们想让大家喝到不一样的饮品，感受到生活中与众不同的小确幸。",
 				//关于我们
 				aboutImg:[
 					"http://www.keepthinking.com.cn/en/img/home.jpg",
@@ -173,57 +128,20 @@
 					dectTwo:"还在投诉服务人员不专业、态度差？"
 					}
 				],	
-				cttTwoImg:"../../../static/images/home/joinUs2.png",
-				//轮播2
-				cscItem:["../../../static/images/home/testImg1.jpg","../../../static/images/home/testImg2.jpg","../../../static/images/home/testImg3.jpg","../../../static/images/home/testImg4.jpg","../../../static/images/home/testImg5.jpg","../../../static/images/home/testImg6.jpg","../../../static/images/home/testImg7.jpg","../../../static/images/home/testImg8.jpg","../../../static/images/home/testImg2.jpg","../../../static/images/home/testImg1.jpg",],
-				crouselScrWidth:null, //每次滚动距离
-				//底部联系我们三个
-				ftclcCont1:[{
-					textCont:"企业管理咨询"
-				},{
-					textCont:"信息技术服务"
-				},{
-					textCont:"应用维护服务"
-				}],
-				ftclcCont2:[{
-					textCont:"管理咨询服务"
-				},{
-					textCont:"企业it系统规划"
-				},{
-					textCont:"it整体外包"
-				}],				
-				ftclcCont:[{
-					textCont:"HR电话:15221175771(刘)"
-				},{
-					textCont:"公司电话:63300002"
-				},{
-					textCont:"hr@keepthinking.com.cn"
-				}],
-				//二维码
-//				ecode:"../../static/images/mine/ecode.png",
-				ecode:"",
-				//首页最热的三类的图标
-				detailFireSrc: [],
 			}
 		},
 		mounted: function() {
-
-			//初始化店铺
-			this.initGetStoreId();
 		},
 
 		methods: {
-			//初始化店铺获取店铺编号
-			initGetStoreId() {
-
-			}
 		},
 		components: {
 			headerBanner,
 			XImg,
 			Flexbox,
 			FlexboxItem,
-			Actionsheet
+			Actionsheet,
+			bottomAboutUs
 		}
 
 	}
@@ -391,78 +309,7 @@
 				}			
 			}				
 			
-				
-/*联系我们*/
-			.findUs{
-				width: 100%;
-				/*margin-top: 0.2rem;*/
-				color: #fff;
-				.findUsCont{
-					position: relative;
-					.abSrcContKTC{
-						height: 4rem;
-						background-color: #333;
-					}
-					.abSrcContImg{
-						height: 4rem;
-					}
-					.fuTrueCont{
-						position: absolute;
-						top: 0;
-						display: flex;
-						background-color: rgba(0,0,0,0.4);
-						width:100%;
-						height: 4rem;
-						flex-direction: column;
-						.ftc-left{
-							padding: 0.4rem 0;
-							.ftcl-title{
-								padding-bottom:0.2rem ;
-								display: flex;
-								justify-content: space-between;
-								span{
-									flex: 1;
-									text-align: center;
-								}
-							}
-							.ftcl-cont{
-								font-size: 0.28rem;
-								display: flex;
-								justify-content: space-around;	
-								.ftcl-contF{	
-									display: flex;			
-									flex-direction: column;			
-									align-items: center;
-									flex: 1;
-									.ftclc-item{
-										margin-bottom: 0.08rem;
-										display: flex;
-										text-align: center;
-										.ftcrc-Img{
-											width: .5rem;
-											height: .5rem;
-										}
-									}
-								}
-							}
-						}
-						.ftc-right{
-							font-size: 0.26rem;
-							.ftcrImg{
-								display: block;
-								width: 100%;
-								text-align: center;
-							}
-						}
-					}
-
-				}				
-							
-			}			
-				
-			
 		}
-		
 	
 	}
 	
