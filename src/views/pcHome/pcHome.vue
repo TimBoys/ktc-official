@@ -14,7 +14,7 @@
 			<div class="ct-title ">
 				<div class="ctt-oneTitle">KeepThinking Consulting</div>
 				<div class="ctt-twoTitle"><div class="line"></div></div>
-				<div class="ctt-threeTitle">关于我们</div>
+				<div class="ctt-threeTitle aboutLink" @click="open('/aboutUs')">关于我们</div>
 			</div>
 <!--关于我们-->
 
@@ -33,7 +33,7 @@
 
 <!--服务领域-->
 		<div class="joinUsCont greyBC pdtbRem2">
-				<div class="ctt-threeTitle">服务领域</div>	
+				<div class="ctt-threeTitle aboutLink"  @click="open('/services')">服务领域</div>	
 				<div class="ctt-fourTitle">我们为客户提供涵盖桌面端、移动终端、服务器、网络及应用等以企业云为基础的IT服务。</div>	
 				<div class="ctt-two">
 					<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont">
@@ -48,7 +48,7 @@
 
 <!--为什么选择我们-->
 		<div class="whyjoinUsCont pdtbRem2">
-				<div class="ctt-threeTitle">为什么选择我们</div>	
+				<div class="ctt-threeTitle aboutLink" @click="open('/services')">为什么选择我们</div>	
 				<div class="ctt-fourTitle">我们为您的企业量身定制适合您的服务方案。</div>	
 				<div class="ctt-two">
 					<div v-for="(abSrcItem,index) in whyjoinUsCont" :key="index" class="abSrcCont">
@@ -65,7 +65,7 @@
 		<div class="carouselCont2">
 				<div class="ctt-oneTitle">KeepThinking Consulting</div>
 				<div class="ctt-twoTitle"><div class="line"></div></div>
-				<div class="ctt-threeTitle">客户名录</div>	
+				<div class="ctt-threeTitle aboutLink" @click="open('/succCase')">客户名录</div>	
 				<!--模态框2-->
 				<div class="carouseScroll">
 					<swiperWork :cscItem="cscItem"></swiperWork>
@@ -164,7 +164,9 @@
 		},
 
 		methods: {
-
+			open(link){
+				this.$router.openPage(link)
+			}
 		},
 		components: {
 			swiperWork,
@@ -215,7 +217,9 @@
 					padding-bottom: 0.3rem;
 					color: $originColor;
 				}
+
 			}
+
 			/*关于我们*/
 			@media screen and (min-width:720px) {
 				.ct-aboutAss {
@@ -460,5 +464,7 @@
 	
 	}
 	
-	
+	.aboutLink:hover{
+		cursor: pointer;
+	}	
 </style>

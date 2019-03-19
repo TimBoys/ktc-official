@@ -6,9 +6,9 @@
 <!--内容模块-->
 		<div class="homeContainer">
 <!--关于我们-->
-	    <Tabs>
+	    <Tabs :animated="false">
 	<!--咨询服务-->
-	        <TabPane label="公司简介">
+	        <TabPane label="公司简介" class="ktcComDetail">
 			<div class="ct-aboutAss pdtbRem2 ">
 				<div class="ctt-threeTitle">公司简介</div>	
 			    <Row>
@@ -43,14 +43,16 @@
 									信息技术最基本的目标是为人们提供一个舒适、安全、方便和高效的生活环境 . 对信息技术产品来说 , 最重要的 。 信息技术控制系统的经营商更要本着消费者至上的理念 ,本着从客户利益出发心态 , 以认真、负责、诚信的态度 。
 								</div>								
 							</div>	
-							<div class="ctt-two ">
-								<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont">
-									<div >
-										<x-img v-lazy="abSrcItem.src" class="abSrcContImg"></x-img>
-										<div class="dectOne">{{abSrcItem.dectOne}}</div>
-										<div class="dectTwo">{{abSrcItem.dectTwo}}</div>
+							<div class="ctt-two " >
+								<Row>
+									<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont" :xs="12" :sm="12" :md="8" :lg="6" :xl="6">
+										<div>
+											<x-img v-lazy="abSrcItem.src" class="abSrcContImg"></x-img>
+											<div class="dectOne">{{abSrcItem.dectOne}}</div>
+											<div class="dectTwo">{{abSrcItem.dectTwo}}</div>
+										</div>
 									</div>
-								</div>
+								</Row>
 							</div>				
 					</div>					
 			</TabPane>
@@ -158,7 +160,6 @@
 /*关于我们*/
 			@media screen and (min-width:720px) {
 				.ct-aboutAss {
-					/*padding: 0 2.2rem;*/
 					padding-bottom: 0.4rem;
 					 margin: 0 auto;
    					 max-width: 1200px;
@@ -252,17 +253,17 @@
 					height: 3.8rem;
 				}		
 				.ctt-two{
-					width: 88%;
-					margin: 0.4rem auto 0;
+					width: 100%;
+					margin-top: 0.4rem;
 					display: flex;
 					justify-content: space-around;	
-					padding: 0 40px;
 					.abSrcCont{
-						width: 270px;
-						height: 270px;
-						margin-right: 50px;
+						width: 4rem;
+						height: 4rem;
 						display: inline-block;
-						padding:0.3rem;
+						margin:0.2rem 0.5rem ;
+						padding: 0.1rem;
+						text-align: center;
 						background-color:#f6f6f6;
 						border:1px solid  #eee;
 						&:hover{
@@ -283,10 +284,11 @@
 						}
 						.dectOne{
 							font-size: 0.3rem;
+							height: 30%;
 						}
 						.dectTwo{
 							margin-top: 0.4rem;
-							height: 1rem;
+							height: 20%;
 							font-size: 0.22rem;
 						}
 						}
@@ -298,19 +300,25 @@
 			.whyjoinUsCont{
 				height: 8rem;
 				width: 100%;
-				background-color: rgb(60,60,60);
+				/*background-color: rgb(60,60,60);*/
 				.peopleColor{
-					margin: 0 auto;	
-					width: 88%;
+					margin:  0.5rem;
+					width: calc(100% - 1rem);
 					height: 100%;
 					background-image: url("http://www.itwaibaow.com/statics/css/img/our_team.jpg");
 					background-repeat:no-repeat ;
 					background-size:100% 100% ;
+				}
+				@media screen and (min-width:720px) {
+					.peopleColor{
+						margin: 0.5rem 1.5rem;
+						width: calc(100% - 3rem);
+					}
 				}			
 			}				
 			
 		}
-	
+		
 	}
 	
 	

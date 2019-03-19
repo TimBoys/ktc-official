@@ -5,7 +5,7 @@
 		</div>
 <!--内容模块-->
 		<div class="homeContainer">
-	    <Tabs>
+	    <Tabs :animated="false">
 	<!--咨询服务-->
 	        <TabPane label="咨询服务">
 			<div class="joinUsCont  pdtbRem2">
@@ -73,7 +73,7 @@
 						</p>					
 					</div>	
 					<div class="ctt-two">
-						<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont">
+						<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont abSrcCont2">
 							<div>
 								<x-img v-lazy="abSrcItem.src" class="abSrcContImg"></x-img>
 								<div class="dectOne">{{abSrcItem.dectOne}}</div>
@@ -91,22 +91,22 @@
 					<div class="ctt-fourTitle">
 						<p  class="cttf-cont">
 							     致想咨询是一家专业的软件开发服务提供商。拥有杰出的软件开发团队和顶尖的IT 精英，我们始终以满足客户个性化需求、确保软件适用性为原则，提供咨询服务。  <br />
-							　　为了使软件项目能够按照预定的成本、进度、质量顺利完成，我们制定了一套科学的管理流程，主要阶段如下 <br />
+							　　为了使软件项目能够按照预定的成本、进度、质量顺利完成，我们制定了一套科学的管理流程，主要阶段如下: <br />
 							　　[销售期:] <br />
-							　　　　1、接到您的需求  <br />
-							　　　　2、上门进行需求调研 <br />
-							　　　　3、调研后按照需求进行评估（费用、开发周期） <br />
-							　　　　4、签署合同 <br /> <br />
+							　　　　1、接到您的需求;  <br />
+							　　　　2、上门进行需求调研; <br />
+							　　　　3、调研后按照需求进行评估（费用、开发周期）; <br />
+							　　　　4、签署合同; <br /> <br />
 							
 							　　[执行期:] <br />
-							　　　　1、需求规格说明书以及系统原型  <br />
-							　　　　2、开发计划 <br />
-							　　　　3、开发+测试 <br />
-							　　　　4、试运行 <br />
-							　　　　5、验收 <br /> <br />
+							　　　　1、需求规格说明书以及系统原型;  <br />
+							　　　　2、开发计划; <br />
+							　　　　3、开发+测试 ;<br />
+							　　　　4、试运行; <br />
+							　　　　5、验收; <br /> <br />
 							
 							　　[售后期:] <br />
-							　　　　1、进入系统维护期
+							　　　　1、进入系统维护期;
 						</p>
 					</div>	
 			</div>       	
@@ -258,7 +258,8 @@
 				}		
 				.ctt-two{
 					width: 88%;
-					margin: 0 auto;					
+					margin: 0 auto;
+					margin-top: 0.4rem;				
 					.abSrcCont{
 						width: calc(100%/4);
 						display: inline-block;
@@ -281,6 +282,9 @@
 							max-width: 4rem;
 						}
 						}
+					}
+					.abSrcCont2{
+						margin-top: 0.4rem;
 					}
 				}				
 			}

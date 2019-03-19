@@ -5,10 +5,9 @@ import _ from 'lodash'
 Router.prototype.openPage = function(link,query){
 	this.push({
 		path:link,
-		query:_.assignIn({
-			time:new Date().getTime()
-		},query || {})
-		
+//		query:_.assignIn({
+//			time:new Date().getTime()
+//		},query || {})
 	})
 }
 

@@ -92,6 +92,7 @@
 			.succCaseCont{
 				width:80%;
 				margin: 0 auto;
+				
 				.scc-item{
 					margin: .3rem auto;
 					height:2.4rem;
@@ -112,6 +113,10 @@
 					width: 75%;
 					font-size: 0.16rem;
 					padding-left:0.2rem ;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: flex-start;
 					.cssil-name{
 						color: red;
 						font-size: 0.24rem;
@@ -127,9 +132,15 @@
 					.cssil-sccWorks{
 						font-size: 0.18rem;
 						line-height: 0.26rem;
+					}						
+					
+				}				
+				}		
+				@media screen and (max-width:720px) {
+					.scc-item{
+						height:3.3rem;
 					}
-				}				
-				}				
+				}		
 			}	
 			
 		}

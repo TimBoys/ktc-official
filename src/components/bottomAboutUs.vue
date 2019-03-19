@@ -6,9 +6,9 @@
 					<div class="fuTrueCont">
 						<div class="ftc-left">
 							<div class="ftcl-title">
-								<span>关于我们</span>
-								<span>服务范围</span>
-								<span>联系我们</span>
+								<span class="aboutLink" @click="open('/aboutUs')">关于我们</span>
+								<span class="aboutLink" @click="open('/services')">服务范围</span>
+								<span class="aboutLink" @click="open('/applyJoin')">联系我们</span>
 							</div>
 							<div class="ftcl-cont">
 								<div class="ftcl-contF">
@@ -30,7 +30,7 @@
 							</div>
 						</div>
 						<div class="ftc-right">
-							<span class="ftcrImg">© 2010-2018 The KeepThinking Consulting     沪ICP备11042995号
+							<span class="ftcrImg">© 2010-2019 The KeepThinking Consulting     沪ICP备11042995号
 								<a href="http://218.242.124.22:8081/businessCheck/verifKey.do?showType=extShow&serial=9031000020190226093100000004079874-SAIC_SHOW_310000-20121227090238642826&signData=MEYCIQDR5IDDWEXAZXrL/hkKOuzHl6cAsXYnGdEfRno0wREWWgIhAKEwyYZygMclrd+IwDvyZOCmkB+5TyhHD8VZOxu1OYD2" target="_blank" rel="noopener noreferrer">
 									<x-img class="LzImg" v-lazy="LzImg"></x-img>
 								</a>
@@ -70,14 +70,16 @@
 				},{
 					textCont:"hr@keepthinking.com.cn"
 				}],
-				LzImg:"../../../static/images/home/zhiZhao.jpg",
+				LzImg:"../../../static/images/home/zhiZhao.png",
 			}
 		},
 		mounted(){
 		},
 
 		methods:{
-
+			open(link){
+				this.$router.openPage(link)
+			}
 		},
 
 		components:{
@@ -121,7 +123,7 @@
 								}
 							}
 							.ftcl-cont{
-								font-size: 0.28rem;
+								font-size: 0.26rem;
 								display: flex;
 								justify-content: space-around;	
 								.ftcl-contF{	
@@ -142,7 +144,7 @@
 							}
 						}
 						.ftc-right{
-							font-size: 0.26rem;
+							font-size: 0.24rem;
 							.ftcrImg{
 								display: flex;
 								justify-content: center;
@@ -163,5 +165,8 @@
 				}				
 							
 			}
-	
+
+			.aboutLink:hover{
+				cursor: pointer;
+			}		
 </style>
