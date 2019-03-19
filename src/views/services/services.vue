@@ -20,13 +20,15 @@
 							     运用IT33的技术优势以及专业的IT领域渠道，迅速为企业打造和建立起一套完善的企业级IT环境。我们用熟练的技术、专业的运维流程，来为您降低经营成本，您只须装修经营您的公司核心业务！
 						</p>					
 					<div class="ctt-two">
-						<div v-for="(abSrcItem,index) in joinUsCont1" :key="index" class="abSrcCont">
-							<div>
-								<x-img v-lazy="abSrcItem.src" class="abSrcContImg"></x-img>
-								<div class="dectOne">{{abSrcItem.dectOne}}</div>
-								<div class="dectTwo">{{abSrcItem.dectTwo}}</div>
+						<Row>
+							<div v-for="(abSrcItem,index) in joinUsCont1" :key="index" class="abSrcCont" :xs="12" :sm="6" :md="6" :lg="6">
+								<div  class="abscCont">
+									<x-img v-lazy="abSrcItem.src" class="abSrcContImg"></x-img>
+									<div class="dectOne">{{abSrcItem.dectOne}}</div>
+									<div class="dectTwo">{{abSrcItem.dectTwo}}</div>
+								</div>
 							</div>
-						</div>
+						</Row>
 					</div>					
 					</div>	
 			</div>
@@ -72,14 +74,16 @@
 							     华宇建立了符合业务需要的组织架构、完备的开发管理制度、开发经费的预算管理和保障机制、开发团队的绩效管理及激励机制等管理措施，并且为开发团队构建了适合创新、鼓励创新的创新环境，还通过与国内知名大学及研究机构建立合作研究实验室等方式，实现产学研相结合，进一步加强开发队伍的研究技术能力和技术素质。
 						</p>					
 					</div>	
-					<div class="ctt-two">
-						<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont abSrcCont2">
-							<div>
-								<x-img v-lazy="abSrcItem.src" class="abSrcContImg"></x-img>
-								<div class="dectOne">{{abSrcItem.dectOne}}</div>
-								<div class="dectTwo">{{abSrcItem.dectTwo}}</div>
+					<div class="ctt-two ctt-two2">
+						<Row>
+							<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont abSrcCont2" :xs="12" :sm="6" :md="6" :lg="6">
+								<div class="abscCont">
+									<x-img v-lazy="abSrcItem.src" class="abSrcContImg"></x-img>
+									<div class="dectOne">{{abSrcItem.dectOne}}</div>
+									<div class="dectTwo">{{abSrcItem.dectTwo}}</div>
+								</div>
 							</div>
-						</div>
+						</Row>
 					</div>				
 			</div>      	
 	        	
@@ -228,8 +232,6 @@
 			/*公司文化*/
 			.joinUsCont{
 				width: 100%;
-				/*width: 88%;*/
-				/*margin: 0 6%;*/
 				.ctt-threeTitle{
 					text-align: center;
 					width: 100%;
@@ -238,7 +240,6 @@
 				}	
 				.ctt-fourTitle{
 					font-size: 0.3rem;
-					/*padding:0 1rem 0.1rem 1rem;*/
 					width: 88%;
 					margin: 0 auto;
 					margin-bottom: 0.1rem;
@@ -257,14 +258,25 @@
 					height: 3.8rem;
 				}		
 				.ctt-two{
-					width: 88%;
-					margin: 0 auto;
-					margin-top: 0.4rem;				
+					width: 100%;
+					margin-top: 0.4rem;
+					display: flex;
+					justify-content: space-around;				
 					.abSrcCont{
-						width: calc(100%/4);
+						width: 3.7rem;
+						height: 3.7rem;
 						display: inline-block;
-						padding:0.3rem;
-						div{
+						margin:0.2rem 0.3rem ;
+						padding: 0.1rem;
+						text-align: center;
+						background-color:#f6f6f6;
+						border:1px solid  #eee;						
+						/*width: calc(100%/4);
+						display: inline-block;
+						padding:0.3rem;*/
+						.abscCont{
+							width: 100%;
+							height: 100%;
 							display: flex;
 							flex-direction: column;
 							justify-content: center;
@@ -286,56 +298,12 @@
 					.abSrcCont2{
 						margin-top: 0.4rem;
 					}
-				}				
+				}	
+				.ctt-two2{
+					width: 88%;
+					margin: 0 auto;
+				}							
 			}
-			
-/*为什么加入我们*/
-			.whyjoinUsCont{
-				width: 100%;
-				background-image: url("http://m.itwaibaow.com/statics/images/index-image/Home_Numbers_2.jpg");
-				background-repeat:no-repeat ;
-				background-size:100% 100% ;
-				.ctt-threeTitle,.ctt-fourTitle{
-					text-align: center;
-					width: 100%;
-					color: $originColor;
-					padding: 0.3rem 0;
-				}	
-				.ctt-fourTitle{
-					font-size: 0.3rem;
-					padding:0 1rem 0.1rem 1rem;
-				}	
-				.ctt-twoImg{
-					width:100%;
-					height: 3.8rem;
-				}		
-				.ctt-two{
-					color: #BBB;
-					.abSrcCont{
-						width: calc(100%/4);
-						display: inline-block;
-						padding:0.3rem;
-						div{
-							display: flex;
-							flex-direction: column;
-							justify-content: center;
-							align-items: center;
-							font-size: 0.22rem;
-						.abSrcContImg{
-							width:0.6rem;
-							height:0.6rem;
-						}
-						.dectOne{
-							font-weight: 700;
-							padding: 0.2rem 0 0.1rem 0;
-						}
-						.dectTwo{
-							max-width: 4rem;
-						}
-						}
-					}
-				}				
-			}				
 							
 		}
 	

@@ -45,7 +45,7 @@
 							</div>	
 							<div class="ctt-two " >
 								<Row>
-									<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont" :xs="12" :sm="12" :md="8" :lg="6" :xl="6">
+									<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont" :xs="12" :sm="6" :md="6" :lg="6">
 										<div>
 											<x-img v-lazy="abSrcItem.src" class="abSrcContImg"></x-img>
 											<div class="dectOne">{{abSrcItem.dectOne}}</div>
