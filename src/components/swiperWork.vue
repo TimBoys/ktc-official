@@ -127,4 +127,13 @@
 		position: absolute;
 		right: 2%;		
 	}
+	@media only screen and (max-width: 750px) {
+	.swiper-button-prev{
+		left: -4%!important;
+	}
+	.swiper-button-next{
+		right: -4%!important;		
+
+	}		
+	}
 </style>

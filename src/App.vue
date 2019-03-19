@@ -10,7 +10,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand nsjt-brand" href="#">
+		<a class="navbar-brand nsjt-brand" href="#" @click="open('/pcHome')">
 			KeepThinking Consulting
 		</a>
 	</div>
@@ -98,6 +98,9 @@ export default {
 			},
 			isActive(route){
 				 return this.nowUrl.indexOf(route) != -1;
+			},
+			open(link){
+				this.$router.openPage(link)
 			}
 	},
 	
