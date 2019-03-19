@@ -43,7 +43,7 @@
 									信息技术最基本的目标是为人们提供一个舒适、安全、方便和高效的生活环境 . 对信息技术产品来说 , 最重要的 。 信息技术控制系统的经营商更要本着消费者至上的理念 ,本着从客户利益出发心态 , 以认真、负责、诚信的态度 。
 								</div>								
 							</div>	
-							<div class="ctt-two " >
+							<div class="ctt-two ctt-two2" >
 								<Row>
 									<div v-for="(abSrcItem,index) in joinUsCont" :key="index" class="abSrcCont" :xs="12" :sm="6" :md="6" :lg="6">
 										<div>
@@ -258,10 +258,10 @@
 					display: flex;
 					justify-content: space-around;	
 					.abSrcCont{
-						width: 4rem;
-						height: 4rem;
+						width: 3.7rem;
+						height: 3.7rem;
 						display: inline-block;
-						margin:0.2rem 0.5rem ;
+						margin:0.2rem 0.3rem ;
 						padding: 0.1rem;
 						text-align: center;
 						background-color:#f6f6f6;
@@ -293,6 +293,10 @@
 						}
 						}
 					}
+				}
+				.ctt-two2{
+					width: 88%;
+					margin: 0 auto;
 				}				
 			}	
 			
