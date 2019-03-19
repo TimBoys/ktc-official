@@ -116,6 +116,8 @@
       }
     }
 	.swiper-button-prev{
+		width: 1rem;
+		height: 1rem;
 		outline: none;
 		position: absolute;
 		left: 2%;

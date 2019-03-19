@@ -4,7 +4,8 @@
 		<Carousel v-model="value1" loop autoplay :autoplay-speed="4000" class="carouselCont">
 			<CarouselItem v-for="(imgItem,index) in banner" :key="index">
 				<div class="demo-carousel">
-					<x-img class="carouselImg" v-lazy="imgItem"></x-img>
+					<!--<x-img class="carouselImg" v-lazy="imgItem"></x-img>-->
+					<img class="carouselImg" :src="imgItem" >
 				</div>
 			</CarouselItem>
 		</Carousel>
