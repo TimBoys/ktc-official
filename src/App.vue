@@ -20,7 +20,9 @@
 			<li><a href="#/aboutUs" :class="{'actived' : isActive('aboutUs')}">关于我们</a></li>
 			<li><a href="#/services" :class="{'actived' : isActive('services')}">服务领域</a></li>
 			<li><a href="#/succCase" :class="{'actived' : isActive('succCase')}">成功案例</a></li>
-			<li><a href="#/applyJoin" :class="{'actived' : isActive('applyJoin')}">联系我们</a></li>
+			<!--<li><a href="#/applyJoin" :class="{'actived' : isActive('applyJoin')}">联系我们</a></li>-->
+			<li><a href="mailto:hr@keepthinking.com.cn">联系我们</a></li>
+			
 		</ul>
 		
 	</div>

@@ -8,7 +8,7 @@
 							<div class="ftcl-title">
 								<span class="aboutLink" @click="open('/aboutUs')">关于我们</span>
 								<span class="aboutLink" @click="open('/services')">服务范围</span>
-								<span class="aboutLink" @click="open('/applyJoin')">联系我们</span>
+								<span class="aboutLink">联系我们</span>
 							</div>
 							<div class="ftcl-cont">
 								<div class="ftcl-contF">
